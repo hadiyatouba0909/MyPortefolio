@@ -13,7 +13,7 @@ function Skills() {
   const skills = {
     technicalSkills: [
       "HTML/CSS",
-      "JavaScript/TypeScript",
+      "JavaScript",
       "React.js",
       "Node.js",
       "PHP/Laravel",

@@ -4,34 +4,27 @@ import { motion } from "framer-motion";
 
 function Projects() {
   const projects = [
-    {
-      title: "Application Web de Gestion Pédagogique",
-      period: "Juin-Août 2024",
-      technologies: ["PHP", "Tailwind CSS", "MySQL"],
-      github: "https://github.com/ibrahimaIS/Dev/Gestion_Pedagogique_5000221",
+  {
+      title: "Application Web de Gestion des campagne",
+      period: "Toujours en cours",
+      technologies: ["PHP(Laravel)", "React Js", "Postgres et MongoDB"],
+      github: "https://github.com/pharell98/front-ofms-campagne/tree/dev-hadiyatou.ba",
       isStarred: true,
     },
     {
       title: "Réseau Social pour Coiturler (Collaboration)",
-      period: "En cours",
-      technologies: ["MongoDB", "React.js", "NestJS", "Postgres"],
-      github: "https://github.com/oumarsy97/Project0rupe5",
+      period: "En Terminé",
+      technologies: ["MongoDB", "React.js", "Postgres"],
+      github: "https://github.com/oumarsy97/ProjectGroupe5",
       isStarred: true,
     },
     {
       title: "Application de Gestion de Boutique",
       period: "Toujours en cours",
-      technologies: ["PHP", "Tailwind CSS", "React.js"],
+      technologies: ["Laravel", "React Js", "Postgres"],
       github: "https://github.com/ibrahimaIS/Dev/gestion_boutique_projet",
       isStarred: true,
-    },
-    {
-      title: "API de Gestion de Boutique",
-      period: "En cours",
-      technologies: ["Laravel", "PostgreSQL"],
-      github: "https://github.com/ibrahimaIS/Dev/Team_ONAL_reve-3_Laravel",
-      isStarred: false,
-    },
+    }
   ];
 
   const containerVariants = {

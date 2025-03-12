@@ -5,12 +5,12 @@ function About() {
     { name: "HTML/CSS", image: "https://www.pierre-giraud.com/html-css/cours-complet/imgs/logo-html5-css3.png", type: "Frontend" },
     { name: "Javascript", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEDGcHGK8GlCFHWwkzLt0rIgRVwx5gZMoplQ&s", type: "Frontend" },
     {
-      name: "Typescript",
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
-      type: "Frontend/Backend",
+      name: "Flutter",
+      image: "https://yt3.googleusercontent.com/ytc/AIdro_nqx_sCd8ZIeIcodS0sfeMKJ8rVTslmQHUe_udwGNH2Pg=s900-c-k-c0x00ffffff-no-rj",
+      type: "Mobile",
     },
     { name: "PHP", image: "https://images.sftcdn.net/images/t_app-icon-m/p/f8f40004-96d5-11e6-88c2-00163ec9f5fa/1688065098/php-logo.jpg", type: "Backend" },
-    { name: "Tailwindcss", image: "/images/tailwind.png", type: "Frontend" },
+    { name: "Tailwindcss", image: "https://cdnblog.webkul.com/blog/wp-content/uploads/2024/05/tailwindcss-1633184775.webp", type: "Frontend" },
     { name: "NodeJs Express", image: "https://miro.medium.com/v2/resize:fit:866/1*1UBNwRFaslvqt_G3Njw3pg.jpeg", type: "Backend" },
     { name: "React JS", image: "https://blog.cellenza.com/wp-content/uploads/2015/05/React-JS.png", type: "Frontend" },
     { name: "Laravel", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7p7xDZNood0BXe_5aR6pkFwS0ENdCcsiDTg&s", type: "Backend" },
@@ -25,7 +25,7 @@ function About() {
     },
     {
       institution: "Groupe ISI Suptech",
-      title: "Licence 1 en informatique",
+      title: "Licence en informatique",
       period: "Décembre 2022 - Février 2024",
       details: [
         "Certificate of Completion Option: Programming Fundamentals(HTML,CSS et JAVASCRIPT)",
@@ -84,8 +84,8 @@ function About() {
         >
           Je m'appelle Hadiyatou BA. Je suis développeuse Web/Mobile Full-stack,
           passionnée par la création d'applications innovantes. Maîtrisant les
-          fondamentaux du développement moderne (HTML/CSS, JavaScript, React et
-          Angular), je consolide quotidiennement mes compétences à travers des
+          fondamentaux du développement moderne (HTML/CSS, JavaScript, React
+          ), je consolide quotidiennement mes compétences à travers des
           projets pratiques. Mon parcours autodidacte et ma formation intensive
           témoignent de ma capacité d'apprentissage rapide et de mon engagement.
           Je cherche une opportunité professionnelle pour mettre en pratique mes

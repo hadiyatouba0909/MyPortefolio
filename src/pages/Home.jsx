@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaLanguage, FaUserTie } from "react-icons/fa";
+import { FaLanguage, FaUserTie, FaDownload } from "react-icons/fa";
 
 function Home() {
   const containerVariants = {
@@ -19,6 +19,20 @@ function Home() {
       y: 0,
       opacity: 1,
     },
+  };
+
+  // Fonction pour gérer le téléchargement du CV
+  const handleDownloadCV = () => {
+    // Chemin vers votre fichier CV (ajustez selon votre structure de projet)
+    const cvPath = "/documents/HadiyatouCV_ba.pdf";
+    
+    // Créer un élément <a> pour le téléchargement
+    const link = document.createElement("a");
+    link.href = cvPath;
+    link.download = "HadiyatouCV_ba.pdf"; // Nom du fichier téléchargé
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -53,15 +67,16 @@ function Home() {
               variants={itemVariants}
             >
               Maîtrisant les fondamentaux du développement moderne (HTML/CSS,
-              JavaScript, Typescript, PHP).
+              JavaScript, PHP).
             </motion.p>
             <motion.button
-              className="bg-gradient-custom text-white px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
+              className="bg-gradient-custom text-white px-6 py-3 rounded-lg hover:opacity-90 transition-opacity flex items-center gap-2"
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={handleDownloadCV}
             >
-              Télécharger mon CV
+              <FaDownload /> Télécharger mon CV
             </motion.button>
           </div>
           <motion.div
