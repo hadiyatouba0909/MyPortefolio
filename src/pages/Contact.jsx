@@ -3,17 +3,24 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { 
   FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub, 
-  FaPaperPlane, FaCheckCircle, FaUser, FaComment
+  FaPaperPlane, FaCheckCircle, FaUser, FaComment, FaExclamationCircle
 } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState(null);
   
   const { ref: contactRef, inView: contactInView } = useInView({ threshold: 0.2, triggerOnce: true });
   const { ref: formRef, inView: formInView } = useInView({ threshold: 0.2, triggerOnce: true });
+
+  // EmailJS Configuration
+  const EMAILJS_SERVICE_ID = "service_0wvilyo";
+  const EMAILJS_TEMPLATE_ID = "template_580w58a";
+  const EMAILJS_PUBLIC_KEY = "kOlkdbA6RdnkwnyL4";
 
   const contactInfo = [
     {
@@ -52,16 +59,37 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000);
+    try {
+      // Envoyer l'email via EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_name: "Hadiyatou",
+      };
+
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+      
+      setIsSubmitted(true);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => setIsSubmitted(false), 5000);
+    } catch (err) {
+      console.error("Erreur EmailJS:", err);
+      setError("Une erreur est survenue. Veuillez réessayer ou me contacter directement par email.");
+      setTimeout(() => setError(null), 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const containerVariants = {
@@ -257,6 +285,18 @@ function Contact() {
                 </motion.div>
               ) : (
                 <div className="space-y-6">
+                  {/* Error Message */}
+                  {error && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="p-4 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center gap-3"
+                    >
+                      <FaExclamationCircle className="text-red-500 text-xl flex-shrink-0" />
+                      <p className="text-red-500 text-sm">{error}</p>
+                    </motion.div>
+                  )}
+                  
                   {/* Name */}
                   <div>
                     <label className="block text-sm font-medium dark:text-gray-300 text-gray-700 mb-2">
