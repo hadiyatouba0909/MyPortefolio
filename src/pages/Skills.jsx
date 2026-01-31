@@ -157,23 +157,18 @@ function Skills() {
         </motion.div>
 
         {/* Technical Skills Grid */}
-        <motion.section
+        <section
           ref={techRef}
           className="mb-20"
-          variants={containerVariants}
-          initial="hidden"
-          animate={techInView ? "visible" : "hidden"}
         >
-          <motion.h2 
-            variants={itemVariants}
+          <h2 
             className="text-2xl font-bold mb-8"
           >
             <span className="text-gradient">Compétences Techniques</span>
-          </motion.h2>
+          </h2>
 
-          <motion.div 
+          <div 
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-            layout
           >
             <AnimatePresence mode="popLayout">
               {filteredSkills.map((skill, index) => (
@@ -229,28 +224,23 @@ function Skills() {
                 </motion.div>
               ))}
             </AnimatePresence>
-          </motion.div>
-        </motion.section>
+          </div>
+        </section>
 
         {/* Soft Skills */}
-        <motion.section
+        <section
           ref={softRef}
-          variants={containerVariants}
-          initial="hidden"
-          animate={softInView ? "visible" : "hidden"}
         >
-          <motion.h2 
-            variants={itemVariants}
+          <h2 
             className="text-2xl font-bold mb-8"
           >
             <span className="text-gradient">Qualités Professionnelles</span>
-          </motion.h2>
+          </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {softSkills.map((skill, index) => (
               <motion.div
                 key={index}
-                variants={itemVariants}
                 className="group relative p-6 rounded-2xl glass overflow-hidden card-hover"
                 whileHover={{ y: -10 }}
               >
@@ -276,7 +266,7 @@ function Skills() {
               </motion.div>
             ))}
           </div>
-        </motion.section>
+        </section>
       </div>
     </div>
   );

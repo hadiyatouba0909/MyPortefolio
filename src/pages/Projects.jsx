@@ -134,19 +134,15 @@ function Projects() {
         </motion.div>
 
         {/* Projects Grid */}
-        <motion.div
+        <div
           ref={projectsRef}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate={projectsInView ? "visible" : "hidden"}
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
                 layout
-                variants={itemVariants}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
@@ -239,7 +235,7 @@ function Projects() {
               </motion.div>
             ))}
           </AnimatePresence>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
         <motion.div
