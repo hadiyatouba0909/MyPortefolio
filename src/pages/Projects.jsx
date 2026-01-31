@@ -1,53 +1,90 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { FaGithub, FaExternalLinkAlt, FaReact, FaLaravel, FaNodeJs, FaDocker } from "react-icons/fa";
-import { SiMongodb, SiPostgresql, SiTailwindcss, SiPrisma, SiExpress, SiMysql, SiNeo4J } from "react-icons/si";
-import { HiSparkles } from "react-icons/hi";
+import { FaGithub, FaExternalLinkAlt, FaReact, FaLaravel, FaNodeJs, FaDocker, FaTimes, FaUsers, FaUser, FaCalendarAlt, FaCheckCircle } from "react-icons/fa";
+import { SiMongodb, SiPostgresql, SiTailwindcss, SiPrisma, SiExpress, SiMysql, SiNeo4J, SiCloudinary, SiJsonwebtokens, SiSwagger, SiVite } from "react-icons/si";
+import { HiSparkles, HiEye } from "react-icons/hi";
 
 function Projects() {
   const [filter, setFilter] = useState("all");
+  const [selectedProject, setSelectedProject] = useState(null);
   const { ref: projectsRef, inView: projectsInView } = useInView({ threshold: 0.1 });
 
   const projects = [
     {
       id: 1,
       title: "Application de Gestion de Campagnes Marketing — OFMS",
-      description: "Conception et développement complet d'une application de gestion des campagnes marketing pour Orange Finances Mobiles Sénégal. L'application permet la création, le suivi et la gestion des campagnes marketing.",
+      shortDescription: "Plateforme de gestion des campagnes marketing pour Orange Finances Mobiles Sénégal.",
+      fullDescription: "Conception et développement complet d'une application de gestion des campagnes marketing pour Orange Finances Mobiles Sénégal (OFMS). L'application permet la création, le suivi et la gestion des campagnes marketing avec des tableaux de bord interactifs, des rapports détaillés et un système de notifications en temps réel.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      technologies: ["React 18", "Vite", "Tailwind CSS", "Laravel", "MySQL", "Cloudinary"],
-      techIcons: [<FaReact key="react" />, <SiTailwindcss key="tailwind" />, <FaLaravel key="laravel" />, <SiMysql key="mysql" />],
+      technologies: ["React 18", "Vite", "Tailwind CSS", "Laravel", "MySQL", "Cloudinary", "Nodemailer"],
+      techIcons: [<FaReact key="react" />, <SiVite key="vite" />, <SiTailwindcss key="tailwind" />, <FaLaravel key="laravel" />, <SiMysql key="mysql" />, <SiCloudinary key="cloud" />],
       github: "https://github.com/ofms-campagne/back-campagne-ofms/tree/devhadiyatou.ba",
       status: "Terminé",
       category: "web",
       featured: true,
-      team: true
+      team: true,
+      role: "Développeuse Full-Stack",
+      duration: "Déc 2024 - Mai 2025",
+      features: [
+        "Création et gestion des campagnes marketing",
+        "Tableaux de bord avec statistiques en temps réel",
+        "Système de rapports et exports",
+        "Gestion des utilisateurs et permissions",
+        "Notifications par email",
+        "Upload d'images via Cloudinary"
+      ],
+      architecture: "API REST, Architecture MVC"
     },
     {
       id: 2,
       title: "Maraba Fashion — Plateforme E-commerce",
-      description: "Conception et développement complet d'une plateforme e-commerce pour une boutique de mode africaine, comprenant un site vitrine client, un panneau d'administration et une API REST.",
+      shortDescription: "Plateforme e-commerce pour une boutique de mode africaine.",
+      fullDescription: "Conception et développement complet d'une plateforme e-commerce pour une boutique de mode africaine, comprenant un site vitrine client élégant, un panneau d'administration complet et une API REST sécurisée. Le projet inclut la gestion des produits, des commandes, des paiements et des utilisateurs.",
       image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop",
-      technologies: ["React 18", "Node.js", "Express.js", "Prisma", "PostgreSQL", "JWT"],
-      techIcons: [<FaReact key="react" />, <FaNodeJs key="node" />, <SiPrisma key="prisma" />, <SiPostgresql key="postgres" />],
+      technologies: ["React 18", "Vite", "Tailwind CSS", "Node.js", "Express.js", "Prisma ORM", "PostgreSQL", "JWT", "Cloudinary", "Nodemailer"],
+      techIcons: [<FaReact key="react" />, <SiTailwindcss key="tailwind" />, <FaNodeJs key="node" />, <SiPrisma key="prisma" />, <SiPostgresql key="postgres" />, <SiJsonwebtokens key="jwt" />],
       github: "https://github.com/hadiyatouba0909/maraba_fashion",
       status: "Terminé",
       category: "web",
       featured: true,
-      team: false
+      team: false,
+      role: "Développeuse Full-Stack (Solo)",
+      duration: "Projet personnel",
+      features: [
+        "Catalogue produits avec filtres et recherche",
+        "Panier d'achat et checkout",
+        "Authentification JWT sécurisée",
+        "Panel d'administration complet",
+        "Gestion des commandes",
+        "Upload d'images produits"
+      ],
+      architecture: "API REST, JWT Authentication"
     },
     {
       id: 3,
       title: "Application de Réseau Social",
-      description: "Conception et développement d'une application de réseau social permettant la gestion des profils, des publications et des interactions entre utilisateurs. Déploiement avec Docker.",
+      shortDescription: "Réseau social avec gestion des profils et interactions.",
+      fullDescription: "Conception et développement d'une application de réseau social permettant la gestion des profils, des publications et des interactions entre utilisateurs. L'application utilise une architecture moderne avec PostgreSQL pour les données relationnelles et Neo4j pour les graphes de relations sociales. Déploiement containerisé avec Docker.",
       image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop",
-      technologies: ["React 18", "Node.js", "Prisma", "PostgreSQL", "Neo4j", "Docker"],
-      techIcons: [<FaReact key="react" />, <FaNodeJs key="node" />, <SiPostgresql key="postgres" />, <FaDocker key="docker" />],
+      technologies: ["React 18", "Vite", "Tailwind CSS", "Node.js", "Prisma ORM", "PostgreSQL", "Neo4j", "Docker", "Swagger", "Render"],
+      techIcons: [<FaReact key="react" />, <FaNodeJs key="node" />, <SiPrisma key="prisma" />, <SiPostgresql key="postgres" />, <FaDocker key="docker" />, <SiSwagger key="swagger" />],
       github: "https://github.com/oumarsy97/reactProjectGroupe5/tree/hadiyatou",
       status: "Terminé",
       category: "web",
       featured: true,
-      team: true
+      team: true,
+      role: "Développeuse Full-Stack",
+      duration: "Projet académique",
+      features: [
+        "Création et gestion de profils utilisateurs",
+        "Système de publications et commentaires",
+        "Relations d'amitié (follow/unfollow)",
+        "Fil d'actualité personnalisé",
+        "Documentation API avec Swagger",
+        "Déploiement Docker sur Render"
+      ],
+      architecture: "API REST, JWT Authentication, Graph Database"
     }
   ];
 
@@ -60,23 +97,6 @@ function Projects() {
   const filteredProjects = filter === "all" 
     ? projects 
     : projects.filter(p => p.category === filter);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { type: "spring", stiffness: 100 }
-    }
-  };
 
   return (
     <div className="min-h-screen pt-24 pb-16">
@@ -149,7 +169,8 @@ function Projects() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                className="group relative rounded-2xl overflow-hidden glass card-hover"
+                className="group relative rounded-2xl overflow-hidden glass card-hover cursor-pointer"
+                onClick={() => setSelectedProject(project)}
               >
                 {/* Featured Badge */}
                 {project.featured && (
@@ -162,6 +183,12 @@ function Projects() {
                   </motion.div>
                 )}
 
+                {/* Team Badge */}
+                <div className="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-black/50 backdrop-blur-sm text-white text-xs font-medium flex items-center gap-1">
+                  {project.team ? <FaUsers /> : <FaUser />}
+                  {project.team ? "Équipe" : "Solo"}
+                </div>
+
                 {/* Project Image */}
                 <div className="relative h-48 overflow-hidden">
                   <motion.img
@@ -172,6 +199,17 @@ function Projects() {
                     transition={{ duration: 0.5 }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  
+                  {/* View Details Overlay */}
+                  <div className="absolute inset-0 bg-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileHover={{ scale: 1.1 }}
+                      className="px-4 py-2 rounded-full bg-white/90 text-purple-600 font-semibold flex items-center gap-2"
+                    >
+                      <HiEye /> Voir détails
+                    </motion.div>
+                  </div>
                   
                   {/* Status Badge */}
                   <div className={`absolute bottom-4 left-4 px-3 py-1 rounded-full text-xs font-semibold ${
@@ -185,28 +223,16 @@ function Projects() {
 
                 {/* Project Content */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold dark:text-white text-gray-900 mb-3 group-hover:text-gradient transition-all">
+                  <h3 className="text-lg font-bold dark:text-white text-gray-900 mb-2 group-hover:text-gradient transition-all line-clamp-1">
                     {project.title}
                   </h3>
                   <p className="dark:text-gray-400 text-gray-600 text-sm mb-4 line-clamp-2">
-                    {project.description}
+                    {project.shortDescription}
                   </p>
 
-                  {/* Technologies */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech, idx) => (
-                      <span
-                        key={idx}
-                        className="px-3 py-1 text-xs rounded-full bg-purple-500/10 dark:text-purple-300 text-purple-600"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
                   {/* Tech Icons */}
-                  <div className="flex gap-3 mb-4 text-2xl dark:text-gray-400 text-gray-500">
-                    {project.techIcons.map((icon, idx) => (
+                  <div className="flex gap-3 mb-4 text-xl dark:text-gray-400 text-gray-500">
+                    {project.techIcons.slice(0, 4).map((icon, idx) => (
                       <motion.span
                         key={idx}
                         whileHover={{ scale: 1.2, color: "#8B5CF6" }}
@@ -215,21 +241,14 @@ function Projects() {
                         {icon}
                       </motion.span>
                     ))}
+                    {project.techIcons.length > 4 && (
+                      <span className="text-sm text-purple-500">+{project.techIcons.length - 4}</span>
+                    )}
                   </div>
 
-                  {/* Links */}
-                  <div className="flex gap-4">
-                    <motion.a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 dark:bg-gray-700 text-white text-sm font-medium hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <FaGithub />
-                      Code Source
-                    </motion.a>
+                  {/* Click to view */}
+                  <div className="text-sm text-purple-500 font-medium flex items-center gap-1">
+                    <HiEye /> Cliquez pour voir les détails
                   </div>
                 </div>
 
@@ -268,6 +287,168 @@ function Projects() {
           </div>
         </motion.div>
       </div>
+
+      {/* Project Detail Modal */}
+      <AnimatePresence>
+        {selectedProject && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            {/* Backdrop */}
+            <motion.div
+              className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedProject(null)}
+            />
+
+            {/* Modal Content */}
+            <motion.div
+              className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl bg-white dark:bg-gray-900 shadow-2xl"
+              initial={{ scale: 0.8, opacity: 0, y: 50 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.8, opacity: 0, y: 50 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+            >
+              {/* Close Button */}
+              <button
+                onClick={() => setSelectedProject(null)}
+                className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+              >
+                <FaTimes size={20} />
+              </button>
+
+              {/* Modal Header Image */}
+              <div className="relative h-64 md:h-80">
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900 via-transparent to-transparent" />
+                
+                {/* Status & Team Badges */}
+                <div className="absolute bottom-4 left-6 flex gap-3">
+                  <div className={`px-4 py-2 rounded-full text-sm font-semibold ${
+                    selectedProject.status === "Terminé" 
+                      ? "bg-green-500 text-white" 
+                      : "bg-yellow-500 text-black"
+                  }`}>
+                    <FaCheckCircle className="inline mr-2" />
+                    {selectedProject.status}
+                  </div>
+                  <div className="px-4 py-2 rounded-full bg-purple-500 text-white text-sm font-semibold">
+                    {selectedProject.team ? <><FaUsers className="inline mr-2" />Projet en équipe</> : <><FaUser className="inline mr-2" />Projet solo</>}
+                  </div>
+                </div>
+              </div>
+
+              {/* Modal Body */}
+              <div className="p-6 md:p-8">
+                {/* Title */}
+                <h2 className="text-2xl md:text-3xl font-bold dark:text-white text-gray-900 mb-2">
+                  {selectedProject.title}
+                </h2>
+
+                {/* Role & Duration */}
+                <div className="flex flex-wrap gap-4 mb-6 text-sm">
+                  <span className="flex items-center gap-2 text-purple-500">
+                    <FaUser /> {selectedProject.role}
+                  </span>
+                  <span className="flex items-center gap-2 dark:text-gray-400 text-gray-600">
+                    <FaCalendarAlt /> {selectedProject.duration}
+                  </span>
+                </div>
+
+                {/* Description */}
+                <div className="mb-8">
+                  <h3 className="text-lg font-semibold dark:text-white text-gray-900 mb-3">Description</h3>
+                  <p className="dark:text-gray-300 text-gray-700 leading-relaxed">
+                    {selectedProject.fullDescription}
+                  </p>
+                </div>
+
+                {/* Features */}
+                <div className="mb-8">
+                  <h3 className="text-lg font-semibold dark:text-white text-gray-900 mb-3">Fonctionnalités</h3>
+                  <ul className="grid md:grid-cols-2 gap-3">
+                    {selectedProject.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2 dark:text-gray-300 text-gray-700">
+                        <FaCheckCircle className="text-green-500 mt-1 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Technologies */}
+                <div className="mb-8">
+                  <h3 className="text-lg font-semibold dark:text-white text-gray-900 mb-3">Technologies utilisées</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedProject.technologies.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="px-4 py-2 rounded-full bg-purple-500/10 dark:text-purple-300 text-purple-600 text-sm font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Architecture */}
+                <div className="mb-8">
+                  <h3 className="text-lg font-semibold dark:text-white text-gray-900 mb-3">Architecture</h3>
+                  <p className="dark:text-gray-300 text-gray-700">{selectedProject.architecture}</p>
+                </div>
+
+                {/* Tech Icons */}
+                <div className="mb-8">
+                  <h3 className="text-lg font-semibold dark:text-white text-gray-900 mb-3">Stack technique</h3>
+                  <div className="flex flex-wrap gap-4 text-3xl dark:text-gray-400 text-gray-500">
+                    {selectedProject.techIcons.map((icon, idx) => (
+                      <motion.span
+                        key={idx}
+                        whileHover={{ scale: 1.2, color: "#8B5CF6" }}
+                        className="transition-colors cursor-pointer"
+                      >
+                        {icon}
+                      </motion.span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Actions */}
+                <div className="flex flex-wrap gap-4">
+                  <motion.a
+                    href={selectedProject.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gray-900 dark:bg-gray-700 text-white font-semibold hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <FaGithub size={20} />
+                    Voir le code source
+                  </motion.a>
+                  <motion.button
+                    onClick={() => setSelectedProject(null)}
+                    className="flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-purple-500 text-purple-500 font-semibold hover:bg-purple-500 hover:text-white transition-colors"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Fermer
+                  </motion.button>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
