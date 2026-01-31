@@ -150,7 +150,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
           {/* Right Side Icons */}
           <div className="hidden md:flex items-center gap-4">
             <motion.a 
-              href="https://github.com/hadiyatouba" 
+              href="https://github.com/hadiyatouba0909" 
               target="_blank" 
               rel="noopener noreferrer" 
               className={`social-icon p-2 rounded-lg ${darkMode ? 'text-gray-300 hover:text-white hover:bg-white/10' : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'}`}
@@ -161,7 +161,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
             </motion.a>
             
             <motion.a 
-              href="https://www.linkedin.com/in/hadiyatou-ba" 
+              href="https://www.linkedin.com/in/hadiyatou-ba-a5742a247/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className={`social-icon p-2 rounded-lg ${darkMode ? 'text-gray-300 hover:text-white hover:bg-white/10' : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'}`}
