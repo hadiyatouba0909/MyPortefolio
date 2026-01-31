@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { FaGithub, FaExternalLinkAlt, FaReact, FaLaravel, FaDatabase } from "react-icons/fa";
-import { SiMongodb, SiPostgresql, SiFlutter } from "react-icons/si";
+import { FaGithub, FaExternalLinkAlt, FaReact, FaLaravel, FaNodeJs, FaDocker } from "react-icons/fa";
+import { SiMongodb, SiPostgresql, SiTailwindcss, SiPrisma, SiExpress, SiMysql, SiNeo4J } from "react-icons/si";
 import { HiSparkles } from "react-icons/hi";
 
 function Projects() {
@@ -12,39 +12,42 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Application de Gestion des Campagnes OFMS",
-      description: "Plateforme complète de gestion des campagnes agricoles avec tableaux de bord, rapports et suivi en temps réel.",
+      title: "Application de Gestion de Campagnes Marketing — OFMS",
+      description: "Conception et développement complet d'une application de gestion des campagnes marketing pour Orange Finances Mobiles Sénégal. L'application permet la création, le suivi et la gestion des campagnes marketing.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      technologies: ["React.js", "Laravel", "PostgreSQL", "MongoDB"],
-      techIcons: [<FaReact key="react" />, <FaLaravel key="laravel" />, <SiPostgresql key="postgres" />, <SiMongodb key="mongo" />],
-      github: "https://github.com/pharell98/front-ofms-campagne/tree/dev-hadiyatou.ba",
-      status: "En cours",
+      technologies: ["React 18", "Vite", "Tailwind CSS", "Laravel", "MySQL", "Cloudinary"],
+      techIcons: [<FaReact key="react" />, <SiTailwindcss key="tailwind" />, <FaLaravel key="laravel" />, <SiMysql key="mysql" />],
+      github: "https://github.com/ofms-campagne/back-campagne-ofms/tree/devhadiyatou.ba",
+      status: "Terminé",
       category: "web",
-      featured: true
+      featured: true,
+      team: true
     },
     {
       id: 2,
-      title: "Réseau Social pour Coiffeurs",
-      description: "Application sociale permettant aux coiffeurs de partager leurs créations, gérer leurs rendez-vous et interagir avec leurs clients.",
-      image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=400&fit=crop",
-      technologies: ["React.js", "Node.js", "MongoDB", "Express"],
-      techIcons: [<FaReact key="react" />, <SiMongodb key="mongo" />],
-      github: "https://github.com/oumarsy97/ProjectGroupe5",
+      title: "Maraba Fashion — Plateforme E-commerce",
+      description: "Conception et développement complet d'une plateforme e-commerce pour une boutique de mode africaine, comprenant un site vitrine client, un panneau d'administration et une API REST.",
+      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop",
+      technologies: ["React 18", "Node.js", "Express.js", "Prisma", "PostgreSQL", "JWT"],
+      techIcons: [<FaReact key="react" />, <FaNodeJs key="node" />, <SiPrisma key="prisma" />, <SiPostgresql key="postgres" />],
+      github: "https://github.com/hadiyatouba0909/maraba_fashion",
       status: "Terminé",
       category: "web",
-      featured: true
+      featured: true,
+      team: false
     },
     {
       id: 3,
-      title: "Application de Gestion de Boutique",
-      description: "Solution complète pour la gestion d'inventaire, de ventes et de clients pour les commerces de détail.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      technologies: ["Laravel", "React.js", "PostgreSQL"],
-      techIcons: [<FaLaravel key="laravel" />, <FaReact key="react" />, <SiPostgresql key="postgres" />],
-      github: "https://github.com/ibrahimaIS/Dev/gestion_boutique_projet",
-      status: "En cours",
+      title: "Application de Réseau Social",
+      description: "Conception et développement d'une application de réseau social permettant la gestion des profils, des publications et des interactions entre utilisateurs. Déploiement avec Docker.",
+      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop",
+      technologies: ["React 18", "Node.js", "Prisma", "PostgreSQL", "Neo4j", "Docker"],
+      techIcons: [<FaReact key="react" />, <FaNodeJs key="node" />, <SiPostgresql key="postgres" />, <FaDocker key="docker" />],
+      github: "https://github.com/oumarsy97/reactProjectGroupe5/tree/hadiyatou",
+      status: "Terminé",
       category: "web",
-      featured: true
+      featured: true,
+      team: true
     }
   ];
 

@@ -40,7 +40,7 @@ function Contact() {
     {
       icon: <FaMapMarkerAlt className="text-2xl" />,
       label: "Localisation",
-      value: "Dakar, Sénégal",
+      value: "Sicap Liberté 4, Dakar",
       link: null,
       color: "from-blue-500 to-cyan-500"
     }

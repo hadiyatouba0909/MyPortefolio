@@ -35,10 +35,10 @@ function Home() {
   }, []);
 
   const handleDownloadCV = () => {
-    const cvPath = "/documents/HadiyatouCV_ba.pdf";
+    const cvPath = "/documents/CV_NENEBA_HADIYATOUBA.pdf";
     const link = document.createElement("a");
     link.href = cvPath;
-    link.download = "Hadiyatou_BA_CV.pdf";
+    link.download = "CV_Hadiyatou_BA.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

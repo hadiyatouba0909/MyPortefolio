@@ -1,39 +1,75 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { FaGraduationCap, FaBriefcase, FaHeart, FaQuoteLeft } from "react-icons/fa";
-import { HiAcademicCap, HiLightBulb, HiCode } from "react-icons/hi";
+import { FaGraduationCap, FaBriefcase, FaHeart, FaQuoteLeft, FaBuilding } from "react-icons/fa";
+import { HiAcademicCap, HiLightBulb, HiCode, HiOfficeBuilding } from "react-icons/hi";
 
 function About() {
   const { ref: bioRef, inView: bioInView } = useInView({ threshold: 0.2, triggerOnce: true });
+  const { ref: experienceRef, inView: experienceInView } = useInView({ threshold: 0.2, triggerOnce: true });
   const { ref: educationRef, inView: educationInView } = useInView({ threshold: 0.2, triggerOnce: true });
   const { ref: valuesRef, inView: valuesInView } = useInView({ threshold: 0.2, triggerOnce: true });
 
+  const experiences = [
+    {
+      company: "VNB-IT (Finances)",
+      title: "Stage en développement",
+      period: "Déc 2025 - Février 2026",
+      description: "Stage en développement au sein d'une entreprise spécialisée dans les solutions financières.",
+      icon: <HiOfficeBuilding className="text-2xl" />,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      company: "SARAYA TECH SENEGAL",
+      title: "Développeuse",
+      period: "Juillet 2025 - Octobre 2025",
+      description: "Développement d'applications web et participation à des projets innovants.",
+      icon: <HiCode className="text-2xl" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      company: "Orange Finances Mobiles Sénégal",
+      title: "Développeuse Full-Stack",
+      period: "Déc 2024 - Mai 2025",
+      description: "Conception et développement d'une application de gestion des campagnes marketing. Travail en équipe avec React, Laravel et MySQL.",
+      icon: <FaBuilding className="text-2xl" />,
+      color: "from-orange-500 to-yellow-500"
+    }
+  ];
+
   const education = [
     {
-      institution: "Sonatel Academy",
-      title: "Formation Intensive en Développement Web/Mobile",
-      period: "Février 2024 - Décembre 2024",
+      institution: "Sonatel Academy - Orange Digital Center",
+      title: "Développement Web/Mobile",
+      period: "2023 - 2024",
       description: "Formation intensive axée sur les technologies modernes du développement web et mobile, avec des projets pratiques en équipe.",
       icon: <HiCode className="text-2xl" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      institution: "Groupe ISI Suptech",
-      title: "Licence en Informatique",
-      period: "Décembre 2022 - Février 2024",
+      institution: "ISI Suptech de Dakar",
+      title: "Licence 1 en Informatique de Gestion",
+      period: "2021 - 2022",
       description: "Fondamentaux de la programmation, bases de données, architecture logicielle et méthodologies de développement.",
       icon: <HiAcademicCap className="text-2xl" />,
       color: "from-pink-500 to-orange-500"
     },
     {
-      institution: "Assalar",
-      title: "Baccalauréat L2 (Sciences)",
-      period: "Juillet 2021",
-      description: "Formation scientifique de base ayant développé mes capacités d'analyse et de résolution de problèmes.",
+      institution: "1 Million de Codeurs Sénégal",
+      title: "Certificate of Completion",
+      period: "2022",
+      description: "Programme de formation aux fondamentaux du développement web.",
       icon: <HiLightBulb className="text-2xl" />,
       color: "from-cyan-500 to-purple-500"
     }
+  ];
+
+  const certifications = [
+    "Intelligence Artificielle pour Tous - FORCE-N (2025)",
+    "Web Development in React.js - Coursera (2025)",
+    "APIs in Node.js: RESTful API Backend - Coursera (2025)",
+    "TypeScript Variables and Data Types - Coursera (2024)",
+    "Préparation environnement MEAN/MERN - Coursera (2024)"
   ];
 
   const values = [
@@ -151,16 +187,51 @@ function About() {
               <div className="p-8 rounded-3xl glass">
                 <FaQuoteLeft className="text-4xl text-purple-500/30 mb-4" />
                 <p className="text-lg dark:text-gray-300 text-gray-700 leading-relaxed mb-6">
-                  Je suis <span className="text-gradient font-semibold">Hadiyatou BA</span>, développeuse Web/Mobile Full-stack passionnée par la création d'applications innovantes et performantes.
+                  Je suis <span className="text-gradient font-semibold">Hadiyatou BA</span>, développeuse full-stack passionnée, récemment diplômée d'une formation intensive en développement web et mobile à la Sonatel Academy.
                 </p>
                 <p className="text-lg dark:text-gray-300 text-gray-700 leading-relaxed mb-6">
-                  Maîtrisant les fondamentaux du développement moderne (HTML/CSS, JavaScript, React, Laravel), je consolide quotidiennement mes compétences à travers des projets pratiques. Mon parcours autodidacte et ma formation intensive témoignent de ma capacité d'apprentissage rapide.
+                  Je maîtrise les technologies modernes du front-end et du back-end, avec une approche orientée solutions. Mon parcours combine apprentissage autodidacte et formation structurée, démontrant ma capacité d'adaptation et ma curiosité technique.
                 </p>
                 <p className="text-lg dark:text-gray-300 text-gray-700 leading-relaxed">
-                  Je cherche une opportunité professionnelle pour mettre en pratique mes connaissances et continuer à évoluer au sein d'une équipe technique dynamique.
+                  Je recherche un poste de développeuse full-stack au sein d'une entreprise innovante, où je pourrai contribuer à des projets d'envergure.
                 </p>
               </div>
             </motion.div>
+          </div>
+        </motion.section>
+
+        {/* Experiences Section */}
+        <motion.section
+          ref={experienceRef}
+          className="mb-20"
+          variants={containerVariants}
+          initial="hidden"
+          animate={experienceInView ? "visible" : "hidden"}
+        >
+          <motion.h2 
+            variants={itemVariants}
+            className="text-3xl font-bold mb-12 text-center"
+          >
+            <span className="text-gradient">Expériences Professionnelles</span>
+          </motion.h2>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="p-6 rounded-2xl glass card-hover group"
+                whileHover={{ y: -10 }}
+              >
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${exp.color} flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform`}>
+                  {exp.icon}
+                </div>
+                <span className="text-sm text-purple-500 font-medium">{exp.period}</span>
+                <h3 className="text-xl font-bold dark:text-white text-gray-900 mt-2">{exp.company}</h3>
+                <p className="text-gradient font-medium mt-1">{exp.title}</p>
+                <p className="dark:text-gray-400 text-gray-600 mt-3 text-sm">{exp.description}</p>
+              </motion.div>
+            ))}
           </div>
         </motion.section>
 
