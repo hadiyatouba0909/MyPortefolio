@@ -9,8 +9,8 @@ import { SiTailwindcss, SiMongodb, SiPostgresql, SiFirebase, SiFlutter, SiTypesc
 
 function Skills() {
   const [activeCategory, setActiveCategory] = useState("all");
-  const { ref: techRef, inView: techInView } = useInView({ threshold: 0.2, triggerOnce: true });
-  const { ref: softRef, inView: softInView } = useInView({ threshold: 0.2, triggerOnce: true });
+  const { ref: techRef, inView: techInView } = useInView({ threshold: 0.1 });
+  const { ref: softRef, inView: softInView } = useInView({ threshold: 0.1 });
 
   const categories = [
     { id: "all", label: "Toutes" },

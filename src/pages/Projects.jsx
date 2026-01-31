@@ -7,7 +7,7 @@ import { HiSparkles } from "react-icons/hi";
 
 function Projects() {
   const [filter, setFilter] = useState("all");
-  const { ref: projectsRef, inView: projectsInView } = useInView({ threshold: 0.1, triggerOnce: true });
+  const { ref: projectsRef, inView: projectsInView } = useInView({ threshold: 0.1 });
 
   const projects = [
     {
