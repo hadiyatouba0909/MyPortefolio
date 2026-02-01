@@ -45,6 +45,7 @@ function Projects() {
       technologies: ["React 18", "Vite", "Tailwind CSS", "Node.js", "Express.js", "Prisma ORM", "PostgreSQL", "JWT", "Cloudinary", "Nodemailer"],
       techIcons: [<FaReact key="react" />, <SiTailwindcss key="tailwind" />, <FaNodeJs key="node" />, <SiPrisma key="prisma" />, <SiPostgresql key="postgres" />, <SiJsonwebtokens key="jwt" />],
       github: "https://github.com/hadiyatouba0909/maraba_fashion",
+      liveDemo: "https://maraba-fashion.vercel.app/",
       status: "Terminé",
       category: "web",
       featured: true,
@@ -424,6 +425,19 @@ function Projects() {
 
                 {/* Actions */}
                 <div className="flex flex-wrap gap-4">
+                  {selectedProject.liveDemo && (
+                    <motion.a
+                      href={selectedProject.liveDemo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-custom text-white font-semibold hover:opacity-90 transition-opacity"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <FaExternalLinkAlt size={18} />
+                      Voir le site en ligne
+                    </motion.a>
+                  )}
                   <motion.a
                     href={selectedProject.github}
                     target="_blank"

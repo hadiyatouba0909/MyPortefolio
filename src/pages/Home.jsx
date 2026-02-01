@@ -106,7 +106,7 @@ function Home() {
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             className="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl"
-            animate={{ 
+            animate={{
               scale: [1, 1.2, 1],
               x: [0, 50, 0],
               y: [0, 30, 0]
@@ -115,7 +115,7 @@ function Home() {
           />
           <motion.div
             className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl"
-            animate={{ 
+            animate={{
               scale: [1.2, 1, 1.2],
               x: [0, -30, 0],
               y: [0, -50, 0]
@@ -180,7 +180,7 @@ function Home() {
                 variants={itemVariants}
                 className="text-lg dark:text-gray-400 text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0"
               >
-                Passionnée par la création d'applications web et mobiles innovantes. 
+                Passionnée par la création d'applications web et mobiles innovantes.
                 Je transforme vos idées en solutions numériques élégantes et performantes.
               </motion.p>
 
@@ -267,10 +267,10 @@ function Home() {
                   animate={{ rotate: -360 }}
                   transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
                 />
-                
+
                 {/* Glowing background */}
                 <div className="absolute inset-0 bg-gradient-custom rounded-full blur-2xl opacity-40" />
-                
+
                 {/* Image container */}
                 <motion.div
                   className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white/10"
@@ -291,14 +291,35 @@ function Home() {
                   animate={{ y: [-5, 5, -5] }}
                   transition={{ duration: 3, repeat: Infinity }}
                 >
-                  Full-Stack
+                  React & Flutter
+                </motion.div>
+                <motion.div
+                  className="absolute -top-4 -left-4 px-4 py-2 bg-gradient-secondary rounded-full text-white text-sm font-semibold shadow-glow"
+                  animate={{ y: [5, -5, 5] }}
+                  transition={{ duration: 4, repeat: Infinity }}
+                >
+                  Next.js & Nest.js
                 </motion.div>
                 <motion.div
                   className="absolute -bottom-4 -left-4 px-4 py-2 bg-gradient-secondary rounded-full text-white text-sm font-semibold shadow-glow"
                   animate={{ y: [5, -5, 5] }}
                   transition={{ duration: 3.5, repeat: Infinity }}
                 >
-                  React & Laravel
+                  Node.js & Laravel
+                </motion.div>
+                <motion.div
+                  className="absolute -bottom-4 -right-4 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full text-white text-sm font-semibold shadow-glow"
+                  animate={{ y: [-5, 5, -5] }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                >
+                  MySQL & PostgreSQL
+                </motion.div>
+                <motion.div
+                  className="absolute top-1/2 -right-16 px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-white text-sm font-semibold shadow-glow"
+                  animate={{ x: [-5, 5, -5] }}
+                  transition={{ duration: 4, repeat: Infinity }}
+                >
+                  MongoDB & Firebase
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -380,7 +401,7 @@ function Home() {
                 whileHover={{ y: -10 }}
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-                
+
                 <motion.div
                   className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center text-white mb-6`}
                   whileHover={{ rotate: 360 }}
@@ -388,21 +409,13 @@ function Home() {
                 >
                   {service.icon}
                 </motion.div>
-                
+
                 <h3 className="text-xl font-bold dark:text-white text-gray-900 mb-4">
                   {service.title}
                 </h3>
                 <p className="dark:text-gray-400 text-gray-600">
                   {service.description}
                 </p>
-
-                <motion.div
-                  className="mt-6 flex items-center gap-2 text-purple-500 font-medium opacity-0 group-hover:opacity-100 transition-opacity"
-                  initial={{ x: -10 }}
-                  whileHover={{ x: 0 }}
-                >
-                  En savoir plus <FaArrowRight />
-                </motion.div>
               </motion.div>
             ))}
           </motion.div>
@@ -422,7 +435,7 @@ function Home() {
             {/* Background gradient */}
             <div className="absolute inset-0 bg-gradient-custom opacity-90" />
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yLjIgMS44LTQgNC00czQgMS44IDQgNC0xLjggNC00IDQtNC0xLjgtNC00eiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
-            
+
             <div className="relative z-10 text-center">
               <motion.h2
                 className="text-3xl md:text-4xl font-bold text-white mb-4"
