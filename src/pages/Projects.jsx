@@ -19,7 +19,7 @@ function Projects() {
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
       technologies: ["React 18", "Vite", "Tailwind CSS", "Laravel", "MySQL", "Cloudinary", "Nodemailer"],
       techIcons: [<FaReact key="react" />, <SiVite key="vite" />, <SiTailwindcss key="tailwind" />, <FaLaravel key="laravel" />, <SiMysql key="mysql" />, <SiCloudinary key="cloud" />],
-      github: "https://github.com/ofms-campagne/back-campagne-ofms/tree/devhadiyatou.ba",
+      github: "https://github.com/pharell98/front-ofms-campagne/tree/dev-hadiyatou.ba",
       status: "Terminé",
       category: "web",
       featured: true,
