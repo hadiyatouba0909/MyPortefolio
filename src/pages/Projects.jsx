@@ -38,14 +38,15 @@ function Projects() {
     },
     {
       id: 2,
-      title: "Maraba Fashion — Plateforme E-commerce",
-      shortDescription: "Plateforme e-commerce pour une boutique de mode africaine.",
-      fullDescription: "Conception et développement complet d'une plateforme e-commerce pour une boutique de mode africaine, comprenant un site vitrine client élégant, un panneau d'administration complet et une API REST sécurisée. Le projet inclut la gestion des produits, des commandes, des paiements et des utilisateurs.",
+      title: "Maraba Fashion — Plateforme E-commerce Complète",
+      shortDescription: "Plateforme e-commerce complète : Backend API, Frontend Admin et Site Client.",
+      fullDescription: "Conception et développement complet d'une plateforme e-commerce pour une boutique de mode africaine. Le projet comprend 3 parties : une API REST sécurisée (Backend), un panneau d'administration complet (Frontend Admin) et un site vitrine client élégant (Site Client). Gestion complète des produits, commandes, paiements, utilisateurs et statistiques.",
       image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop",
       technologies: ["React 18", "Vite", "Tailwind CSS", "Node.js", "Express.js", "Prisma ORM", "PostgreSQL", "JWT", "Cloudinary", "Nodemailer"],
       techIcons: [<FaReact key="react" />, <SiTailwindcss key="tailwind" />, <FaNodeJs key="node" />, <SiPrisma key="prisma" />, <SiPostgresql key="postgres" />, <SiJsonwebtokens key="jwt" />],
       github: "https://github.com/hadiyatouba0909/maraba_fashion",
       liveDemo: "https://maraba-fashion.vercel.app/",
+      adminDemo: "https://maraba-fashion-admin.vercel.app/",
       status: "Terminé",
       category: "web",
       featured: true,
@@ -53,14 +54,15 @@ function Projects() {
       role: "Développeuse Full-Stack (Solo)",
       duration: "Projet personnel",
       features: [
-        "Catalogue produits avec filtres et recherche",
-        "Panier d'achat et checkout",
+        "API REST sécurisée avec Node.js & Express",
+        "Panel Admin : gestion produits, commandes, utilisateurs",
+        "Site Client : catalogue, panier, checkout",
         "Authentification JWT sécurisée",
-        "Panel d'administration complet",
-        "Gestion des commandes",
-        "Upload d'images produits"
+        "Tableaux de bord avec statistiques",
+        "Upload d'images via Cloudinary",
+        "Notifications par email"
       ],
-      architecture: "API REST, JWT Authentication"
+      architecture: "API REST, JWT Authentication, Architecture 3-tiers (Backend, Admin, Client)"
     },
     {
       id: 3,
@@ -435,7 +437,20 @@ function Projects() {
                       whileTap={{ scale: 0.95 }}
                     >
                       <FaExternalLinkAlt size={18} />
-                      Voir le site en ligne
+                      Site Client
+                    </motion.a>
+                  )}
+                  {selectedProject.adminDemo && (
+                    <motion.a
+                      href={selectedProject.adminDemo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold hover:opacity-90 transition-opacity"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <FaExternalLinkAlt size={18} />
+                      Panel Admin
                     </motion.a>
                   )}
                   <motion.a
@@ -447,7 +462,7 @@ function Projects() {
                     whileTap={{ scale: 0.95 }}
                   >
                     <FaGithub size={20} />
-                    Voir le code source
+                    Code source
                   </motion.a>
                   <motion.button
                     onClick={() => setSelectedProject(null)}
