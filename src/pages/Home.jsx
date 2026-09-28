@@ -8,10 +8,10 @@ import CountUp from "react-countup";
 function Home() {
   const [currentText, setCurrentText] = useState(0);
   const texts = [
-    "Développeuse Full-Stack",
-    "Passionnée React & Laravel",
-    "Créatrice d'Applications Web",
-    "Mobile Developer (Flutter)"
+    "Développeuse Full-Stack Web / Mobile",
+    "Passionnée React.js, Node.js & Flutter",
+    "Créatrice d'applications web & mobiles",
+    "Mobile Developer (Flutter / React Native)"
   ];
 
   const { ref: heroRef, inView: heroInView } = useInView({ threshold: 0.1, triggerOnce: true });
@@ -35,10 +35,10 @@ function Home() {
   }, []);
 
   const handleDownloadCV = () => {
-    const cvPath = "/documents/CV_NENEBA_HADIYATOUBA.pdf";
+    const cvPath = "/documents/hadiyatouba.cv.pdf";
     const link = document.createElement("a");
     link.href = cvPath;
-    link.download = "CV_Hadiyatou_BA.pdf";
+    link.download = "hadiyatouba.cv.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -48,19 +48,19 @@ function Home() {
     {
       icon: <FaCode className="text-3xl" />,
       title: "Développement Web",
-      description: "Applications web modernes avec React, Laravel, Node.js",
+      description: "Applications web modernes avec React.js, Next.js, Laravel et Node.js",
       gradient: "from-purple-500 to-pink-500"
     },
     {
       icon: <FaMobile className="text-3xl" />,
       title: "Développement Mobile",
-      description: "Applications mobiles cross-platform avec Flutter",
+      description: "Applications mobiles cross-platform avec Flutter et React Native",
       gradient: "from-pink-500 to-orange-500"
     },
     {
       icon: <FaDatabase className="text-3xl" />,
       title: "Backend & API",
-      description: "APIs RESTful robustes avec PostgreSQL, MongoDB",
+      description: "APIs RESTful robustes avec PostgreSQL, MongoDB et Firebase",
       gradient: "from-cyan-500 to-purple-500"
     }
   ];
@@ -278,7 +278,7 @@ function Home() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <img
-                    src="/images/nene.jpg"
+                    src="/images/hadiya.png"
                     alt="Hadiyatou BA"
                     className="w-full h-full object-cover"
                   />
@@ -291,14 +291,14 @@ function Home() {
                   animate={{ y: [-5, 5, -5] }}
                   transition={{ duration: 3, repeat: Infinity }}
                 >
-                  React & Flutter
+                  React.js & Flutter
                 </motion.div>
                 <motion.div
                   className="absolute -top-4 -left-4 px-4 py-2 bg-gradient-secondary rounded-full text-white text-sm font-semibold shadow-glow"
                   animate={{ y: [5, -5, 5] }}
                   transition={{ duration: 4, repeat: Infinity }}
                 >
-                  Next.js & Nest.js
+                  Next.js & Angular
                 </motion.div>
                 <motion.div
                   className="absolute -bottom-4 -left-4 px-4 py-2 bg-gradient-secondary rounded-full text-white text-sm font-semibold shadow-glow"

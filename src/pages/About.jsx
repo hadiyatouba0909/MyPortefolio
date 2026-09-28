@@ -13,25 +13,25 @@ function About() {
   const experiences = [
     {
       company: "VNB-IT (Finances)",
-      title: "Stage en développement",
-      period: "Déc 2025 - Février 2026",
-      description: "Stage en développement au sein d'une entreprise spécialisée dans les solutions financières.",
+      title: "Développeuse Full-Stack",
+      period: "Décembre 2025 - Mars 2026",
+      description: "Développement d'applications web et mobiles pour la gestion financière, conception et intégration d'API REST sécurisées, ainsi que collaboration avec les équipes pour analyser les besoins et livrer des solutions.",
       icon: <HiOfficeBuilding className="text-2xl" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
       company: "SARAYA TECH SENEGAL",
-      title: "Développeuse",
+      title: "Développeuse Full-Stack",
       period: "Juillet 2025 - Octobre 2025",
-      description: "Développement d'applications web et participation à des projets innovants.",
+      description: "Développement de solutions web performantes avec React, Node.js et PostgreSQL, mise en place d'architectures backend et intégration des services cloud, tests, déploiement et maintenance des applications.",
       icon: <HiCode className="text-2xl" />,
       color: "from-green-500 to-emerald-500"
     },
     {
       company: "Orange Finances Mobiles Sénégal",
       title: "Développeuse Full-Stack",
-      period: "Déc 2024 - Mai 2025",
-      description: "Conception et développement d'une application de gestion des campagnes marketing. Travail en équipe avec React, Laravel et MySQL.",
+      period: "Décembre 2024 - Mai 2025",
+      description: "Participation au développement de plateformes internes et outils digitaux, création d'interfaces utilisateur modernes et responsives, optimisation des performances et amélioration continue des applications.",
       icon: <FaBuilding className="text-2xl" />,
       color: "from-orange-500 to-yellow-500"
     }
@@ -61,15 +61,56 @@ function About() {
       description: "Programme de formation aux fondamentaux du développement web.",
       icon: <HiLightBulb className="text-2xl" />,
       color: "from-cyan-500 to-purple-500"
-    }
-  ];
+    },
+    {
+      institution: "FORCE-N",
+      title: "Certificat en Intelligence Artificielle pour Tous",
+      period: "2025",
+      description: "Exploration des concepts fondamentaux de l'intelligence artificielle et de leurs applications pratiques.",
+      icon: <HiAcademicCap className="text-2xl" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      institution: "Coursera Project Network",
+      title: "Certificat en préparation de l'environnement MEAN/MERN",
+      period: "2025",
+      description: "Formation pratique consacrée à la préparation et à la configuration d'un environnement de développement MEAN/MERN.",
+      icon: <HiCode className="text-2xl" />,
+      color: "from-green-500 to-cyan-500"
+    },
+    {
+      institution: "Coursera Project Network",
+      title: "Web Development in React.js: Build a Web App",
+      period: "2025",
+      description: "Formation pratique sur le développement d'applications web modernes avec React.js.",
+      icon: <HiCode className="text-2xl" />,
+      color: "from-cyan-500 to-blue-500"
+    },
+    {
+      institution: "Coursera Project Network",
+      title: "APIs in Node.js: Write a RESTful API Backend Application",
+      period: "2025",
+      description: "Formation pratique sur la conception et le développement d'API RESTful avec Node.js.",
+      icon: <HiCode className="text-2xl" />,
+      color: "from-green-500 to-purple-500"
+    },
+    {
+      institution: "Coursera Project Network",
+      title: "TypeScript Variables and Data Types",
+      period: "2024",
+      description: "Formation consacrée aux variables, types de données et concepts fondamentaux de TypeScript.",
+      icon: <HiCode className="text-2xl" />,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      institution: "Coursera Project Network",
+      title: "Certificat en préparation de l'environnement MEAN/MERN",
+      period: "2024",
+      description: "Formation pratique sur la préparation de l'environnement de développement MEAN/MERN.",
+      icon: <HiCode className="text-2xl" />,
+      color: "from-orange-500 to-pink-500"
+    },
 
-  const certifications = [
-    "Intelligence Artificielle pour Tous - FORCE-N (2025)",
-    "Web Development in React.js - Coursera (2025)",
-    "APIs in Node.js: RESTful API Backend - Coursera (2025)",
-    "TypeScript Variables and Data Types - Coursera (2024)",
-    "Préparation environnement MEAN/MERN - Coursera (2024)"
   ];
 
   const values = [
@@ -123,7 +164,7 @@ function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <motion.span 
+          <motion.span
             className="inline-block px-4 py-2 rounded-full bg-purple-500/10 text-purple-500 text-sm font-medium mb-4"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -156,13 +197,13 @@ function About() {
                 />
                 <div className="relative aspect-square max-w-md mx-auto rounded-3xl overflow-hidden border-2 border-white/10">
                   <img
-                    src="/images/nene.jpg"
+                    src="/images/hadiya.png"
                     alt="Hadiyatou BA"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 via-transparent to-transparent" />
                 </div>
-                
+
                 {/* Floating Card */}
                 <motion.div
                   className="absolute -bottom-6 -right-6 p-4 rounded-2xl glass shadow-glow"
@@ -208,7 +249,7 @@ function About() {
           initial="hidden"
           animate={experienceInView ? "visible" : "hidden"}
         >
-          <motion.h2 
+          <motion.h2
             variants={itemVariants}
             className="text-3xl font-bold mb-12 text-center"
           >
@@ -243,11 +284,11 @@ function About() {
           initial="hidden"
           animate={educationInView ? "visible" : "hidden"}
         >
-          <motion.h2 
+          <motion.h2
             variants={itemVariants}
             className="text-3xl font-bold mb-12 text-center"
           >
-            <span className="text-gradient">Formation & Diplômes</span>
+            <span className="text-gradient">Formations & Certifications</span>
           </motion.h2>
 
           <div className="relative">
@@ -259,9 +300,8 @@ function About() {
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className={`flex flex-col md:flex-row items-center gap-8 ${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
+                  className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                    }`}
                 >
                   {/* Content */}
                   <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
@@ -300,7 +340,7 @@ function About() {
           initial="hidden"
           animate={valuesInView ? "visible" : "hidden"}
         >
-          <motion.h2 
+          <motion.h2
             variants={itemVariants}
             className="text-3xl font-bold mb-12 text-center"
           >

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaGithub, FaExternalLinkAlt, FaReact, FaLaravel, FaNodeJs, FaDocker, FaTimes, FaUsers, FaUser, FaCalendarAlt, FaCheckCircle } from "react-icons/fa";
-import { SiMongodb, SiPostgresql, SiTailwindcss, SiPrisma, SiExpress, SiMysql, SiNeo4J, SiCloudinary, SiJsonwebtokens, SiSwagger, SiVite } from "react-icons/si";
+import { SiMongodb, SiPostgresql, SiTailwindcss, SiPrisma, SiExpress, SiMysql, SiNeo4J, SiCloudinary, SiJsonwebtokens, SiSwagger, SiVite, SiTypescript } from "react-icons/si";
 import { HiSparkles, HiEye } from "react-icons/hi";
 
 function Projects() {
@@ -13,36 +13,35 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Application de Gestion de Campagnes Marketing — OFMS",
-      shortDescription: "Plateforme de gestion des campagnes marketing pour Orange Finances Mobiles Sénégal.",
-      fullDescription: "Conception et développement complet d'une application de gestion des campagnes marketing pour Orange Finances Mobiles Sénégal (OFMS). L'application permet la création, le suivi et la gestion des campagnes marketing avec des tableaux de bord interactifs, des rapports détaillés et un système de notifications en temps réel.",
+      title: "Gandal-Technologie — Site Web",
+      shortDescription: "Site vitrine moderne pour présenter les services et activités de l'entreprise.",
+      fullDescription: "Développement d'un site vitrine moderne pour Gandal-Technologie, inspiré d'une identité visuelle premium et d'une navigation fluide. Le projet met en avant l'entreprise, ses services et son image de marque avec une interface responsive et élégante.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      technologies: ["React 18", "Vite", "Tailwind CSS", "Laravel", "MySQL", "Cloudinary", "Nodemailer"],
-      techIcons: [<FaReact key="react" />, <SiVite key="vite" />, <SiTailwindcss key="tailwind" />, <FaLaravel key="laravel" />, <SiMysql key="mysql" />, <SiCloudinary key="cloud" />],
-      github: "https://github.com/pharell98/front-ofms-campagne/tree/dev-hadiyatou.ba",
+      technologies: ["React", "Vite", "Tailwind CSS", "TypeScript", "Lucide React"],
+      techIcons: [<FaReact key="react" />, <SiVite key="vite" />, <SiTailwindcss key="tailwind" />, <SiTypescript key="ts" />],
+      github: "https://github.com/ofms-campagne/back-campagne-ofms",
       status: "Terminé",
       category: "web",
       featured: true,
       team: true,
-      role: "Développeuse Full-Stack",
-      duration: "Déc 2024 - Mai 2025",
+      role: "Développeuse Frontend",
+      duration: "Projet professionnel",
       features: [
-        "Création et gestion des campagnes marketing",
-        "Tableaux de bord avec statistiques en temps réel",
-        "Système de rapports et exports",
-        "Gestion des utilisateurs et permissions",
-        "Notifications par email",
-        "Upload d'images via Cloudinary"
+        "Site vitrine responsive",
+        "Interface moderne et premium",
+        "Navigation fluide et claire",
+        "Mise en avant des services",
+        "Expérience utilisateur optimisée"
       ],
-      architecture: "API REST, Architecture MVC"
+      architecture: "Frontend React + Tailwind CSS"
     },
     {
       id: 2,
-      title: "Maraba Fashion — Plateforme E-commerce Complète",
-      shortDescription: "Plateforme e-commerce complète : Backend API, Frontend Admin et Site Client.",
-      fullDescription: "Conception et développement complet d'une plateforme e-commerce pour une boutique de mode africaine. Le projet comprend 3 parties : une API REST sécurisée (Backend), un panneau d'administration complet (Frontend Admin) et un site vitrine client élégant (Site Client). Gestion complète des produits, commandes, paiements, utilisateurs et statistiques.",
+      title: "Maraba Fashion — Plateforme E-commerce",
+      shortDescription: "Plateforme e-commerce complète avec site client, admin et API sécurisée.",
+      fullDescription: "Conception et développement complet d'une plateforme e-commerce pour une boutique de mode africaine. Le projet comprend un site client pour découvrir et acheter les produits, un tableau de bord d'administration pour gérer le magasin et une API sécurisée pour les transactions et les données.",
       image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop",
-      technologies: ["React 18", "Vite", "Tailwind CSS", "Node.js", "Express.js", "Prisma ORM", "PostgreSQL", "JWT", "Cloudinary", "Nodemailer"],
+      technologies: ["React", "Tailwind CSS", "Node.js", "Express", "Prisma", "PostgreSQL", "JWT", "Cloudinary"],
       techIcons: [<FaReact key="react" />, <SiTailwindcss key="tailwind" />, <FaNodeJs key="node" />, <SiPrisma key="prisma" />, <SiPostgresql key="postgres" />, <SiJsonwebtokens key="jwt" />],
       github: "https://github.com/hadiyatouba0909/maraba_fashion",
       liveDemo: "https://maraba-fashion.vercel.app/",
@@ -54,40 +53,115 @@ function Projects() {
       role: "Développeuse Full-Stack (Solo)",
       duration: "Projet personnel",
       features: [
-        "API REST sécurisée avec Node.js & Express",
-        "Panel Admin : gestion produits, commandes, utilisateurs",
-        "Site Client : catalogue, panier, checkout",
-        "Authentification JWT sécurisée",
-        "Tableaux de bord avec statistiques",
-        "Upload d'images via Cloudinary",
-        "Notifications par email"
+        "Catalogue produits et filtres",
+        "Panier et checkout",
+        "Tableau de bord admin",
+        "Gestion des commandes et utilisateurs",
+        "Authentification JWT",
+        "Upload d'images produits"
       ],
-      architecture: "API REST, JWT Authentication, Architecture 3-tiers (Backend, Admin, Client)"
+      architecture: "Architecture 3-tiers : Frontend Client, Frontend Admin, Backend API"
     },
     {
       id: 3,
-      title: "Application de Réseau Social",
-      shortDescription: "Réseau social avec gestion des profils et interactions.",
-      fullDescription: "Conception et développement d'une application de réseau social permettant la gestion des profils, des publications et des interactions entre utilisateurs. L'application utilise une architecture moderne avec PostgreSQL pour les données relationnelles et Neo4j pour les graphes de relations sociales. Déploiement containerisé avec Docker.",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop",
-      technologies: ["React 18", "Vite", "Tailwind CSS", "Node.js", "Prisma ORM", "PostgreSQL", "Neo4j", "Docker", "Swagger", "Render"],
-      techIcons: [<FaReact key="react" />, <FaNodeJs key="node" />, <SiPrisma key="prisma" />, <SiPostgresql key="postgres" />, <FaDocker key="docker" />, <SiSwagger key="swagger" />],
-      github: "https://github.com/oumarsy97/reactProjectGroupe5/tree/hadiyatou",
+      title: "Biz Simplifi — Gestion Commerciale & E-commerce",
+      shortDescription: "Application de gestion commerciale et e-commerce avec dashboard global.",
+      fullDescription: "Développement d'une application de gestion commerciale et e-commerce destinée à optimiser la gestion des ventes, des produits et des clients. Le projet inclut un système d'authentification, un tableau de bord, des fonctionnalités e-commerce et une API dédiée pour la logique métier.",
+      image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=600&h=400&fit=crop",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "PostgreSQL", "Neon", "JWT", "Vercel"],
+      techIcons: [<FaReact key="react" />, <SiTypescript key="ts" />, <SiTailwindcss key="tailwind" />, <FaNodeJs key="node" />, <SiPostgresql key="postgres" />, <SiJsonwebtokens key="jwt" />],
+      github: "https://github.com/hadiyatouba0909/biz-simplifi",
+      status: "Terminé",
+      category: "web",
+      featured: true,
+      team: false,
+      role: "Développeuse Full-Stack",
+      duration: "Projet personnel",
+      features: [
+        "Gestion commerciale et vente",
+        "Dashboards de suivi",
+        "Authentification sécurisée",
+        "API backend robuste",
+        "Interface utilisateur moderne",
+        "Déploiement Vercel"
+      ],
+      architecture: "Frontend React + API Node.js + Base de données PostgreSQL"
+    },
+    {
+      id: 4,
+      title: "Gandal-Technologie",
+      shortDescription: "Site vitrine développé avec React, Vite, Tailwind CSS et TypeScript pour présenter les services de l'entreprise.",
+      fullDescription: "Site vitrine moderne pour Gandal-Technologie, conçu pour présenter les services de l'entreprise avec une interface premium, une navigation fluide et une image de marque professionnelle. Le projet met en valeur les prestations et le positionnement de l'entreprise.",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop",
+      technologies: ["React", "Vite", "Tailwind CSS", "TypeScript"],
+      techIcons: [<FaReact key="react" />, <SiVite key="vite" />, <SiTailwindcss key="tailwind" />],
+      github: "https://github.com/ofms-campagne/back-campagne-ofms",
       status: "Terminé",
       category: "web",
       featured: true,
       team: true,
-      role: "Développeuse Full-Stack",
-      duration: "Projet académique",
+      role: "Développeuse Frontend",
+      duration: "Projet professionnel",
       features: [
-        "Création et gestion de profils utilisateurs",
-        "Système de publications et commentaires",
-        "Relations d'amitié (follow/unfollow)",
-        "Fil d'actualité personnalisé",
-        "Documentation API avec Swagger",
-        "Déploiement Docker sur Render"
+        "Site vitrine responsive",
+        "Présentation claire des services",
+        "Interface premium et moderne",
+        "Navigation fluide",
+        "Expérience utilisateur optimisée"
       ],
-      architecture: "API REST, JWT Authentication, Graph Database"
+      architecture: "Frontend React + Tailwind CSS + TypeScript"
+    },
+    {
+      id: 5,
+      title: "Maraba Fashion",
+      shortDescription: "Plateforme e-commerce complète avec site client, tableau de bord admin et API sécurisée pour la gestion des produits et commandes.",
+      fullDescription: "Plateforme e-commerce complète pour une boutique de mode africaine. Elle comprend un front client pour découvrir et acheter les produits, un tableau de bord administrateur pour gérer le catalogue, les commandes et les utilisateurs, ainsi qu'une API sécurisée pour la logique métier.",
+      image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&h=400&fit=crop",
+      technologies: ["React", "Node.js", "Express", "Prisma", "PostgreSQL", "JWT"],
+      techIcons: [<FaReact key="react" />, <FaNodeJs key="node" />, <SiPrisma key="prisma" />, <SiPostgresql key="postgres" />, <SiJsonwebtokens key="jwt" />],
+      github: "https://github.com/hadiyatouba0909/maraba_fashion",
+      liveDemo: "https://maraba-fashion.vercel.app/",
+      adminDemo: "https://maraba-fashion-admin.vercel.app/",
+      status: "Terminé",
+      category: "web",
+      featured: true,
+      team: false,
+      role: "Développeuse Full-Stack",
+      duration: "Projet personnel",
+      features: [
+        "Site client moderne",
+        "Dashboard admin complet",
+        "API sécurisée",
+        "Gestion des produits et commandes",
+        "Authentification JWT",
+        "Upload d'images"
+      ],
+      architecture: "Architecture 3-tiers : frontend client, frontend admin, backend API"
+    },
+    {
+      id: 6,
+      title: "Biz Simplifi",
+      shortDescription: "Application de gestion commerciale et e-commerce avec authentification, API backend, dashboard et expérience utilisateur optimisée.",
+      fullDescription: "Application de gestion commerciale et e-commerce conçue pour faciliter la gestion des ventes, des produits et des clients. Le projet propose un dashboard global, un système d'authentification, une API backend sécurisée et une expérience utilisateur fluide.",
+      image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=600&h=400&fit=crop",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "PostgreSQL"],
+      techIcons: [<FaReact key="react" />, <FaNodeJs key="node" />, <SiTailwindcss key="tailwind" />, <SiPostgresql key="postgres" />],
+      github: "https://github.com/hadiyatouba0909/biz-simplifi",
+      status: "Terminé",
+      category: "web",
+      featured: true,
+      team: false,
+      role: "Développeuse Full-Stack",
+      duration: "Projet personnel",
+      features: [
+        "Gestion commerciale",
+        "Dashboard de suivi",
+        "Authentification sécurisée",
+        "API backend robuste",
+        "Interface moderne",
+        "Déploiement web"
+      ],
+      architecture: "Frontend React + API Node.js + Base de données PostgreSQL"
     }
   ];
 
