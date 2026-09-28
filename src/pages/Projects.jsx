@@ -17,9 +17,9 @@ function Projects() {
       shortDescription: "Site vitrine moderne pour présenter les services et activités de l'entreprise.",
       fullDescription: "Développement d'un site vitrine moderne pour Gandal-Technologie, inspiré d'une identité visuelle premium et d'une navigation fluide. Le projet met en avant l'entreprise, ses services et son image de marque avec une interface responsive et élégante.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-      technologies: ["React", "Vite", "Tailwind CSS", "TypeScript", "Lucide React"],
       techIcons: [<FaReact key="react" />, <SiVite key="vite" />, <SiTailwindcss key="tailwind" />, <SiTypescript key="ts" />],
       github: "https://github.com/ofms-campagne/back-campagne-ofms",
+      liveDemo: "https://www.gandal-technologie.com/",
       status: "Terminé",
       category: "web",
       featured: true,
@@ -41,7 +41,6 @@ function Projects() {
       shortDescription: "Plateforme e-commerce complète avec site client, admin et API sécurisée.",
       fullDescription: "Conception et développement complet d'une plateforme e-commerce pour une boutique de mode africaine. Le projet comprend un site client pour découvrir et acheter les produits, un tableau de bord d'administration pour gérer le magasin et une API sécurisée pour les transactions et les données.",
       image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop",
-      technologies: ["React", "Tailwind CSS", "Node.js", "Express", "Prisma", "PostgreSQL", "JWT", "Cloudinary"],
       techIcons: [<FaReact key="react" />, <SiTailwindcss key="tailwind" />, <FaNodeJs key="node" />, <SiPrisma key="prisma" />, <SiPostgresql key="postgres" />, <SiJsonwebtokens key="jwt" />],
       github: "https://github.com/hadiyatouba0909/maraba_fashion",
       liveDemo: "https://maraba-fashion.vercel.app/",
@@ -68,9 +67,9 @@ function Projects() {
       shortDescription: "Application de gestion commerciale et e-commerce avec dashboard global.",
       fullDescription: "Développement d'une application de gestion commerciale et e-commerce destinée à optimiser la gestion des ventes, des produits et des clients. Le projet inclut un système d'authentification, un tableau de bord, des fonctionnalités e-commerce et une API dédiée pour la logique métier.",
       image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=600&h=400&fit=crop",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "PostgreSQL", "Neon", "JWT", "Vercel"],
       techIcons: [<FaReact key="react" />, <SiTypescript key="ts" />, <SiTailwindcss key="tailwind" />, <FaNodeJs key="node" />, <SiPostgresql key="postgres" />, <SiJsonwebtokens key="jwt" />],
       github: "https://github.com/hadiyatouba0909/biz-simplifi",
+      liveDemo: "https://biz-simplifi-frontend.onrender.com",
       status: "Terminé",
       category: "web",
       featured: true,
@@ -87,82 +86,7 @@ function Projects() {
       ],
       architecture: "Frontend React + API Node.js + Base de données PostgreSQL"
     },
-    {
-      id: 4,
-      title: "Gandal-Technologie",
-      shortDescription: "Site vitrine développé avec React, Vite, Tailwind CSS et TypeScript pour présenter les services de l'entreprise.",
-      fullDescription: "Site vitrine moderne pour Gandal-Technologie, conçu pour présenter les services de l'entreprise avec une interface premium, une navigation fluide et une image de marque professionnelle. Le projet met en valeur les prestations et le positionnement de l'entreprise.",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop",
-      technologies: ["React", "Vite", "Tailwind CSS", "TypeScript"],
-      techIcons: [<FaReact key="react" />, <SiVite key="vite" />, <SiTailwindcss key="tailwind" />],
-      github: "https://github.com/ofms-campagne/back-campagne-ofms",
-      status: "Terminé",
-      category: "web",
-      featured: true,
-      team: true,
-      role: "Développeuse Frontend",
-      duration: "Projet professionnel",
-      features: [
-        "Site vitrine responsive",
-        "Présentation claire des services",
-        "Interface premium et moderne",
-        "Navigation fluide",
-        "Expérience utilisateur optimisée"
-      ],
-      architecture: "Frontend React + Tailwind CSS + TypeScript"
-    },
-    {
-      id: 5,
-      title: "Maraba Fashion",
-      shortDescription: "Plateforme e-commerce complète avec site client, tableau de bord admin et API sécurisée pour la gestion des produits et commandes.",
-      fullDescription: "Plateforme e-commerce complète pour une boutique de mode africaine. Elle comprend un front client pour découvrir et acheter les produits, un tableau de bord administrateur pour gérer le catalogue, les commandes et les utilisateurs, ainsi qu'une API sécurisée pour la logique métier.",
-      image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&h=400&fit=crop",
-      technologies: ["React", "Node.js", "Express", "Prisma", "PostgreSQL", "JWT"],
-      techIcons: [<FaReact key="react" />, <FaNodeJs key="node" />, <SiPrisma key="prisma" />, <SiPostgresql key="postgres" />, <SiJsonwebtokens key="jwt" />],
-      github: "https://github.com/hadiyatouba0909/maraba_fashion",
-      liveDemo: "https://maraba-fashion.vercel.app/",
-      adminDemo: "https://maraba-fashion-admin.vercel.app/",
-      status: "Terminé",
-      category: "web",
-      featured: true,
-      team: false,
-      role: "Développeuse Full-Stack",
-      duration: "Projet personnel",
-      features: [
-        "Site client moderne",
-        "Dashboard admin complet",
-        "API sécurisée",
-        "Gestion des produits et commandes",
-        "Authentification JWT",
-        "Upload d'images"
-      ],
-      architecture: "Architecture 3-tiers : frontend client, frontend admin, backend API"
-    },
-    {
-      id: 6,
-      title: "Biz Simplifi",
-      shortDescription: "Application de gestion commerciale et e-commerce avec authentification, API backend, dashboard et expérience utilisateur optimisée.",
-      fullDescription: "Application de gestion commerciale et e-commerce conçue pour faciliter la gestion des ventes, des produits et des clients. Le projet propose un dashboard global, un système d'authentification, une API backend sécurisée et une expérience utilisateur fluide.",
-      image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=600&h=400&fit=crop",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "PostgreSQL"],
-      techIcons: [<FaReact key="react" />, <FaNodeJs key="node" />, <SiTailwindcss key="tailwind" />, <SiPostgresql key="postgres" />],
-      github: "https://github.com/hadiyatouba0909/biz-simplifi",
-      status: "Terminé",
-      category: "web",
-      featured: true,
-      team: false,
-      role: "Développeuse Full-Stack",
-      duration: "Projet personnel",
-      features: [
-        "Gestion commerciale",
-        "Dashboard de suivi",
-        "Authentification sécurisée",
-        "API backend robuste",
-        "Interface moderne",
-        "Déploiement web"
-      ],
-      architecture: "Frontend React + API Node.js + Base de données PostgreSQL"
-    }
+   
   ];
 
   const categories = [
@@ -307,22 +231,6 @@ function Projects() {
                     {project.shortDescription}
                   </p>
 
-                  {/* Tech Icons */}
-                  <div className="flex gap-3 mb-4 text-xl dark:text-gray-400 text-gray-500">
-                    {project.techIcons.slice(0, 4).map((icon, idx) => (
-                      <motion.span
-                        key={idx}
-                        whileHover={{ scale: 1.2, color: "#8B5CF6" }}
-                        className="transition-colors"
-                      >
-                        {icon}
-                      </motion.span>
-                    ))}
-                    {project.techIcons.length > 4 && (
-                      <span className="text-sm text-purple-500">+{project.techIcons.length - 4}</span>
-                    )}
-                  </div>
-
                   {/* Click to view */}
                   <div className="text-sm text-purple-500 font-medium flex items-center gap-1">
                     <HiEye /> Cliquez pour voir les détails
@@ -460,43 +368,6 @@ function Projects() {
                       </li>
                     ))}
                   </ul>
-                </div>
-
-                {/* Technologies */}
-                <div className="mb-8">
-                  <h3 className="text-lg font-semibold dark:text-white text-gray-900 mb-3">Technologies utilisées</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedProject.technologies.map((tech, idx) => (
-                      <span
-                        key={idx}
-                        className="px-4 py-2 rounded-full bg-purple-500/10 dark:text-purple-300 text-purple-600 text-sm font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Architecture */}
-                <div className="mb-8">
-                  <h3 className="text-lg font-semibold dark:text-white text-gray-900 mb-3">Architecture</h3>
-                  <p className="dark:text-gray-300 text-gray-700">{selectedProject.architecture}</p>
-                </div>
-
-                {/* Tech Icons */}
-                <div className="mb-8">
-                  <h3 className="text-lg font-semibold dark:text-white text-gray-900 mb-3">Stack technique</h3>
-                  <div className="flex flex-wrap gap-4 text-3xl dark:text-gray-400 text-gray-500">
-                    {selectedProject.techIcons.map((icon, idx) => (
-                      <motion.span
-                        key={idx}
-                        whileHover={{ scale: 1.2, color: "#8B5CF6" }}
-                        className="transition-colors cursor-pointer"
-                      >
-                        {icon}
-                      </motion.span>
-                    ))}
-                  </div>
                 </div>
 
                 {/* Actions */}
