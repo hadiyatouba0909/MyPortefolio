@@ -197,8 +197,8 @@ function About() {
                 />
                 <div className="relative aspect-square max-w-md mx-auto rounded-3xl overflow-hidden border-2 border-white/10">
                   <img
-                    src="/images/hadiya.png"
-                    alt="Hadiyatou BA"
+                    src="/images/neneba.jpeg"
+                    alt="Nénéba BA"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 via-transparent to-transparent" />
@@ -228,7 +228,7 @@ function About() {
               <div className="p-8 rounded-3xl glass">
                 <FaQuoteLeft className="text-4xl text-purple-500/30 mb-4" />
                 <p className="text-lg dark:text-gray-300 text-gray-700 leading-relaxed mb-6">
-                  Je suis <span className="text-gradient font-semibold">Hadiyatou BA</span>, développeuse full-stack passionnée, récemment diplômée d'une formation intensive en développement web et mobile à la Sonatel Academy.
+                  Je suis <span className="text-gradient font-semibold">Hadiyatou BA</span>, développeuse full-stack passionnée, certifiée d'une formation intensive en développement web et mobile à la Sonatel Academy.
                 </p>
                 <p className="text-lg dark:text-gray-300 text-gray-700 leading-relaxed mb-6">
                   Je maîtrise les technologies modernes du front-end et du back-end, avec une approche orientée solutions. Mon parcours combine apprentissage autodidacte et formation structurée, démontrant ma capacité d'adaptation et ma curiosité technique.

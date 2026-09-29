@@ -208,9 +208,6 @@ function App() {
                 © {new Date().getFullYear()} <span className="text-gradient font-semibold">Hadiyatou BA</span>. 
                 Tous droits réservés.
               </p>
-              <p className="text-sm dark:text-gray-500 text-gray-500 mt-2">
-                Fait avec <span className="text-pink-500">❤</span> à Dakar, Sénégal
-              </p>
             </div>
           </motion.div>
         </footer>

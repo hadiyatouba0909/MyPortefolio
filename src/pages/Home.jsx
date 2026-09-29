@@ -180,8 +180,7 @@ function Home() {
                 variants={itemVariants}
                 className="text-lg dark:text-gray-400 text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0"
               >
-                Passionnée par la création d'applications web et mobiles innovantes.
-                Je transforme vos idées en solutions numériques élégantes et performantes.
+                Passionnée par la création d’applications web et mobiles innovantes, je transforme vos idées en solutions numériques performantes et adaptées à vos besoins.
               </motion.p>
 
               <motion.div
@@ -224,7 +223,7 @@ function Home() {
               >
                 {[
                   { icon: <FaGithub size={24} />, href: "https://github.com/hadiyatouba", label: "GitHub" },
-                  { icon: <FaLinkedin size={24} />, href: "https://www.linkedin.com/in/hadiyatou-ba", label: "LinkedIn" },
+                  { icon: <FaLinkedin size={24} />, href: "https://www.linkedin.com/in/hadiyatou-ba-a5742a247/", label: "LinkedIn" },
                   { icon: <FaEnvelope size={24} />, href: "mailto:hadiyatoubab09@gmail.com", label: "Email" }
                 ].map((social, index) => (
                   <motion.a
@@ -278,8 +277,8 @@ function Home() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <img
-                    src="/images/hadiya.png"
-                    alt="Hadiyatou BA"
+                    src="/images/neneba.jpeg"
+                    alt="Nénéba BA"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent" />

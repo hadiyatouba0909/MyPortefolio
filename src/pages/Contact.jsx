@@ -41,13 +41,13 @@ function Contact() {
       icon: <FaMapMarkerAlt className="text-2xl" />,
       label: "Localisation",
       value: "Sicap Liberté 4, Dakar",
-      link: null,
+      link: "https://www.google.com/maps/search/?api=1&query=Sicap+Libert%C3%A9+4+Dakar",
       color: "from-blue-500 to-cyan-500"
     }
   ];
 
   const socialLinks = [
-    { icon: <FaLinkedin size={24} />, href: "https://www.linkedin.com/in/hadiyatou-ba", label: "LinkedIn", color: "#0077B5" },
+    { icon: <FaLinkedin size={24} />, href: "https://www.linkedin.com/in/hadiyatou-ba-a5742a247/", label: "LinkedIn", color: "#0077B5" },
     { icon: <FaGithub size={24} />, href: "https://github.com/hadiyatouba", label: "GitHub", color: "#333" },
     { icon: <FaEnvelope size={24} />, href: "mailto:hadiyatoubab09@gmail.com", label: "Email", color: "#EA4335" }
   ];
@@ -140,7 +140,7 @@ function Contact() {
             <span className="text-gradient">Contacter</span>
           </h1>
           <p className="dark:text-gray-400 text-gray-600 max-w-2xl mx-auto">
-            Une question, un projet ou simplement envie de discuter ? N'hésitez pas à me contacter !
+            Une question, un projet ou simplement envie d’échanger sur vos idées ? N’hésitez pas à me contacter.
           </p>
         </motion.div>
 
@@ -170,6 +170,7 @@ function Contact() {
                   {info.link ? (
                     <a 
                       href={info.link}
+                      {...(info.link.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
                       className="flex items-center gap-4 p-4 rounded-2xl glass card-hover"
                     >
                       <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${info.color} flex items-center justify-center text-white group-hover:scale-110 transition-transform`}>
