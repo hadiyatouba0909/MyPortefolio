@@ -35,10 +35,10 @@ function Home() {
   }, []);
 
   const handleDownloadCV = () => {
-    const cvPath = "/documents/hadiyatouba.cv.pdf";
+    const cvPath = "/documents/CV_hadiyatouba.pdf";
     const link = document.createElement("a");
     link.href = cvPath;
-    link.download = "hadiyatouba.cv.pdf";
+    link.download = "CV_hadiyatouba.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
