@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaGithub, FaExternalLinkAlt, FaReact, FaLaravel, FaNodeJs, FaDocker, FaTimes, FaUsers, FaUser, FaCalendarAlt, FaCheckCircle } from "react-icons/fa";
 import { SiMongodb, SiPostgresql, SiTailwindcss, SiPrisma, SiExpress, SiMysql, SiNeo4J, SiCloudinary, SiJsonwebtokens, SiSwagger, SiVite, SiTypescript } from "react-icons/si";
-import { HiSparkles, HiEye } from "react-icons/hi";
+import { HiEye } from "react-icons/hi";
 
 function Projects() {
   const [filter, setFilter] = useState("all");
@@ -101,12 +101,6 @@ function Projects() {
 
   return (
     <div className="min-h-screen pt-24 pb-16">
-      {/* Background Elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-40 left-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-40 right-20 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl" />
-      </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <motion.div
@@ -115,21 +109,15 @@ function Projects() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <motion.span 
-            className="inline-block px-4 py-2 rounded-full bg-purple-500/10 text-purple-500 text-sm font-medium mb-4"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: "spring" }}
-          >
-            <HiSparkles className="inline mr-2" />
+          <span className="inline-block px-4 py-2 rounded-full bg-purple-500/10 text-purple-500 text-sm font-medium mb-4">
             Mon Portfolio
-          </motion.span>
+          </span>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="dark:text-white text-gray-900">Mes </span>
             <span className="text-gradient">Projets</span>
           </h1>
           <p className="dark:text-gray-400 text-gray-600 max-w-2xl mx-auto">
-            Découvrez mes réalisations récentes et les technologies que j'ai utilisées
+            Mes réalisations, avec les liens vers les démos et le code source
           </p>
         </motion.div>
 
@@ -173,17 +161,6 @@ function Projects() {
                 className="group relative rounded-2xl overflow-hidden glass card-hover cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
-                {/* Featured Badge */}
-                {project.featured && (
-                  <motion.div
-                    className="absolute top-4 right-4 z-20 px-3 py-1 rounded-full bg-gradient-custom text-white text-xs font-semibold flex items-center gap-1"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  >
-                    <HiSparkles /> Featured
-                  </motion.div>
-                )}
-
                 {/* Team Badge */}
                 <div className="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-black/50 backdrop-blur-sm text-white text-xs font-medium flex items-center gap-1">
                   {project.team ? <FaUsers /> : <FaUser />}
@@ -390,7 +367,7 @@ function Projects() {
                       href={selectedProject.adminDemo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold hover:opacity-90 transition-opacity"
+                      className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-custom text-white font-semibold hover:opacity-90 transition-opacity"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >

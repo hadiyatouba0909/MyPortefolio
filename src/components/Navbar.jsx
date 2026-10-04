@@ -60,7 +60,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
     }),
     hover: {
       scale: 1.1,
-      color: "#EC4899",
+      color: "#14b8a6",
       transition: { type: "spring", stiffness: 400 }
     }
   };
@@ -98,15 +98,9 @@ function Navbar({ darkMode, toggleDarkMode }) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <motion.div 
-                className="w-10 h-10 rounded-xl bg-gradient-custom flex items-center justify-center"
-                animate={{ 
-                  boxShadow: ['0 0 20px rgba(139, 92, 246, 0.5)', '0 0 40px rgba(236, 72, 153, 0.5)', '0 0 20px rgba(139, 92, 246, 0.5)']
-                }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
+              <div className="w-10 h-10 rounded-xl bg-gradient-custom flex items-center justify-center">
                 <span className="text-white font-bold text-xl">H</span>
-              </motion.div>
+              </div>
               <span className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                 Hadiyatou<span className="text-gradient">.dev</span>
               </span>

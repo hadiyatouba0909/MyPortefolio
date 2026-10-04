@@ -5,7 +5,6 @@ import {
   FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaGithub, 
   FaPaperPlane, FaCheckCircle, FaUser, FaComment, FaExclamationCircle
 } from "react-icons/fa";
-import { HiSparkles } from "react-icons/hi";
 import emailjs from "@emailjs/browser";
 
 function Contact() {
@@ -27,22 +26,19 @@ function Contact() {
       icon: <FaPhone className="text-2xl" />,
       label: "Téléphone",
       value: "+221 78 016 04 74",
-      link: "tel:+22178016074",
-      color: "from-green-500 to-emerald-500"
+      link: "tel:+22178016074"
     },
     {
       icon: <FaEnvelope className="text-2xl" />,
       label: "Email",
       value: "hadiyatoubab09@gmail.com",
-      link: "mailto:hadiyatoubab09@gmail.com",
-      color: "from-purple-500 to-pink-500"
+      link: "mailto:hadiyatoubab09@gmail.com"
     },
     {
       icon: <FaMapMarkerAlt className="text-2xl" />,
       label: "Localisation",
       value: "Sicap Liberté 4, Dakar",
-      link: "https://www.google.com/maps/search/?api=1&query=Sicap+Libert%C3%A9+4+Dakar",
-      color: "from-blue-500 to-cyan-500"
+      link: "https://www.google.com/maps/search/?api=1&query=Sicap+Libert%C3%A9+4+Dakar"
     }
   ];
 
@@ -111,13 +107,6 @@ function Contact() {
 
   return (
     <div className="min-h-screen pt-24 pb-16">
-      {/* Background Elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-20 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
-      </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <motion.div
@@ -126,15 +115,9 @@ function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <motion.span 
-            className="inline-block px-4 py-2 rounded-full bg-purple-500/10 text-purple-500 text-sm font-medium mb-4"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: "spring" }}
-          >
-            <HiSparkles className="inline mr-2" />
+          <span className="inline-block px-4 py-2 rounded-full bg-purple-500/10 text-purple-500 text-sm font-medium mb-4">
             Restons en Contact
-          </motion.span>
+          </span>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="dark:text-white text-gray-900">Me </span>
             <span className="text-gradient">Contacter</span>
@@ -156,7 +139,7 @@ function Contact() {
               variants={itemVariants}
               className="text-2xl font-bold mb-8"
             >
-              <span className="text-gradient">Informations de Contact</span>
+              <span className="text-gradient">Informations de contact</span>
             </motion.h2>
 
             {/* Contact Cards */}
@@ -173,7 +156,7 @@ function Contact() {
                       {...(info.link.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
                       className="flex items-center gap-4 p-4 rounded-2xl glass card-hover"
                     >
-                      <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${info.color} flex items-center justify-center text-white group-hover:scale-110 transition-transform`}>
+                      <div className="w-14 h-14 rounded-xl bg-gradient-custom flex items-center justify-center text-white">
                         {info.icon}
                       </div>
                       <div>
@@ -185,7 +168,7 @@ function Contact() {
                     </a>
                   ) : (
                     <div className="flex items-center gap-4 p-4 rounded-2xl glass">
-                      <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${info.color} flex items-center justify-center text-white`}>
+                      <div className="w-14 h-14 rounded-xl bg-gradient-custom flex items-center justify-center text-white">
                         {info.icon}
                       </div>
                       <div>
@@ -256,7 +239,7 @@ function Contact() {
               variants={itemVariants}
               className="text-2xl font-bold mb-8"
             >
-              <span className="text-gradient">Envoyez-moi un Message</span>
+              <span className="text-gradient">Envoyez-moi un message</span>
             </motion.h2>
 
             <motion.form

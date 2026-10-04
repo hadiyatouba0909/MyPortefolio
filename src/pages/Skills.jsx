@@ -9,7 +9,6 @@ import { SiTailwindcss, SiMongodb, SiPostgresql, SiFirebase, SiFlutter, SiTypesc
 
 function Skills() {
   const [activeCategory, setActiveCategory] = useState("all");
-  const { ref: techRef, inView: techInView } = useInView({ threshold: 0.1 });
   const { ref: softRef, inView: softInView } = useInView({ threshold: 0.1 });
 
   const categories = [
@@ -21,64 +20,58 @@ function Skills() {
   ];
 
   const technicalSkills = [
-    { name: "HTML5", icon: <FaHtml5 />, level: 95, category: "frontend", color: "#E34F26" },
-    { name: "CSS3", icon: <FaCss3Alt />, level: 90, category: "frontend", color: "#1572B6" },
-    { name: "JavaScript", icon: <FaJs />, level: 88, category: "frontend", color: "#F7DF1E" },
-    { name: "TypeScript", icon: <SiTypescript />, level: 75, category: "frontend", color: "#3178C6" },
-    { name: "React.js", icon: <FaReact />, level: 85, category: "frontend", color: "#61DAFB" },
-    { name: "React Native", icon: <FaReact />, level: 72, category: "mobile", color: "#61DAFB" },
-    { name: "Next.js", icon: <FaReact />, level: 70, category: "frontend", color: "#000000" },
-    { name: "Angular", icon: <FaCode />, level: 60, category: "frontend", color: "#DD0031" },
-    { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 90, category: "frontend", color: "#06B6D4" },
-    { name: "PHP", icon: <FaPhp />, level: 80, category: "backend", color: "#777BB4" },
-    { name: "Laravel", icon: <FaLaravel />, level: 82, category: "backend", color: "#FF2D20" },
-    { name: "Node.js", icon: <FaNodeJs />, level: 78, category: "backend", color: "#339933" },
-    { name: "Spring Boot", icon: <FaCode />, level: 65, category: "backend", color: "#6DB33F" },
-    { name: "PostgreSQL", icon: <SiPostgresql />, level: 75, category: "backend", color: "#4169E1" },
-    { name: "MongoDB", icon: <SiMongodb />, level: 72, category: "backend", color: "#47A248" },
-    { name: "Flutter", icon: <SiFlutter />, level: 70, category: "mobile", color: "#02569B" },
-    { name: "Firebase", icon: <SiFirebase />, level: 75, category: "tools", color: "#FFCA28" },
-    { name: "Git/GitHub", icon: <FaGitAlt />, level: 85, category: "tools", color: "#F05032" },
-    { name: "Docker", icon: <FaDocker />, level: 65, category: "tools", color: "#2496ED" },
-    { name: "Figma", icon: <FaFigma />, level: 70, category: "tools", color: "#F24E1E" }
+    { name: "HTML5", icon: <FaHtml5 />, category: "frontend", color: "#E34F26" },
+    { name: "CSS3", icon: <FaCss3Alt />, category: "frontend", color: "#1572B6" },
+    { name: "JavaScript", icon: <FaJs />, category: "frontend", color: "#F7DF1E" },
+    { name: "TypeScript", icon: <SiTypescript />, category: "frontend", color: "#3178C6" },
+    { name: "React.js", icon: <FaReact />, category: "frontend", color: "#61DAFB" },
+    { name: "React Native", icon: <FaReact />, category: "mobile", color: "#61DAFB" },
+    { name: "Next.js", icon: <FaReact />, category: "frontend", color: "#000000" },
+    { name: "Angular", icon: <FaCode />, category: "frontend", color: "#DD0031" },
+    { name: "Tailwind CSS", icon: <SiTailwindcss />, category: "frontend", color: "#06B6D4" },
+    { name: "PHP", icon: <FaPhp />, category: "backend", color: "#777BB4" },
+    { name: "Laravel", icon: <FaLaravel />, category: "backend", color: "#FF2D20" },
+    { name: "Node.js", icon: <FaNodeJs />, category: "backend", color: "#339933" },
+    { name: "Spring Boot", icon: <FaCode />, category: "backend", color: "#6DB33F" },
+    { name: "PostgreSQL", icon: <SiPostgresql />, category: "backend", color: "#4169E1" },
+    { name: "MongoDB", icon: <SiMongodb />, category: "backend", color: "#47A248" },
+    { name: "Flutter", icon: <SiFlutter />, category: "mobile", color: "#02569B" },
+    { name: "Firebase", icon: <SiFirebase />, category: "tools", color: "#FFCA28" },
+    { name: "Git/GitHub", icon: <FaGitAlt />, category: "tools", color: "#F05032" },
+    { name: "Docker", icon: <FaDocker />, category: "tools", color: "#2496ED" },
+    { name: "Figma", icon: <FaFigma />, category: "tools", color: "#F24E1E" }
   ];
 
   const softSkills = [
     {
       icon: <FaUsers className="text-3xl" />,
       title: "Communication",
-      description: "Excellente capacité à communiquer et collaborer en équipe",
-      gradient: "from-purple-500 to-pink-500"
+      description: "Excellente capacité à communiquer et collaborer en équipe"
     },
     {
       icon: <FaBrain className="text-3xl" />,
       title: "Autonomie & Apprentissage",
-      description: "Capacité d'auto-apprentissage et maîtrise rapide de nouvelles technologies",
-      gradient: "from-pink-500 to-orange-500"
+      description: "Capacité d'auto-apprentissage et maîtrise rapide de nouvelles technologies"
     },
     {
       icon: <FaCode className="text-3xl" />,
       title: "Clean Code",
-      description: "Engagement envers les principes de Clean Code et SOLID",
-      gradient: "from-cyan-500 to-blue-500"
+      description: "Engagement envers les principes de Clean Code et SOLID"
     },
     {
       icon: <FaTools className="text-3xl" />,
       title: "Méthodologie Agile",
-      description: "Expérience en méthodologie Agile avec excellente adaptabilité",
-      gradient: "from-green-500 to-cyan-500"
+      description: "Expérience en méthodologie Agile avec excellente adaptabilité"
     },
     {
       icon: <FaCogs className="text-3xl" />,
       title: "Veille Technologique",
-      description: "Adaptabilité et ouverture aux nouvelles technologies",
-      gradient: "from-orange-500 to-red-500"
+      description: "Adaptabilité et ouverture aux nouvelles technologies"
     },
     {
       icon: <FaBook className="text-3xl" />,
       title: "Documentation",
-      description: "Capacité à documenter le code de manière claire et concise",
-      gradient: "from-blue-500 to-purple-500"
+      description: "Capacité à documenter le code de manière claire et concise"
     }
   ];
 
@@ -105,12 +98,6 @@ function Skills() {
 
   return (
     <div className="min-h-screen pt-24 pb-16">
-      {/* Background Elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-10 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl" />
-      </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <motion.div
@@ -161,10 +148,7 @@ function Skills() {
         </motion.div>
 
         {/* Technical Skills Grid */}
-        <section
-          ref={techRef}
-          className="mb-20"
-        >
+        <section className="mb-20">
           <h2 
             className="text-2xl font-bold mb-8"
           >
@@ -175,7 +159,7 @@ function Skills() {
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
           >
             <AnimatePresence mode="popLayout">
-              {filteredSkills.map((skill, index) => (
+              {filteredSkills.map((skill) => (
                 <motion.div
                   key={skill.name}
                   layout
@@ -185,38 +169,19 @@ function Skills() {
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.3 }}
                   className="group relative p-6 rounded-2xl glass card-hover"
-                  whileHover={{ y: -10 }}
                 >
                   {/* Skill Icon */}
-                  <motion.div
-                    className="text-5xl mb-4 transition-transform group-hover:scale-110"
+                  <div
+                    className="text-5xl mb-4"
                     style={{ color: skill.color }}
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.5 }}
                   >
                     {skill.icon}
-                  </motion.div>
-
-                  {/* Skill Name */}
-                  <h3 className="font-semibold dark:text-white text-gray-900 mb-3">
-                    {skill.name}
-                  </h3>
-
-                  {/* Progress Bar */}
-                  <div className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                    <motion.div
-                      className="h-full rounded-full"
-                      style={{ backgroundColor: skill.color }}
-                      initial={{ width: 0 }}
-                      animate={techInView ? { width: `${skill.level}%` } : { width: 0 }}
-                      transition={{ duration: 1, delay: index * 0.1 }}
-                    />
                   </div>
 
-                  {/* Level */}
-                  <p className="text-sm dark:text-gray-400 text-gray-600 mt-2">
-                    {skill.level}%
-                  </p>
+                  {/* Skill Name */}
+                  <h3 className="font-semibold dark:text-white text-gray-900">
+                    {skill.name}
+                  </h3>
 
                   {/* Glow effect on hover */}
                   <div 
@@ -245,20 +210,12 @@ function Skills() {
             {softSkills.map((skill, index) => (
               <motion.div
                 key={index}
-                className="group relative p-6 rounded-2xl glass overflow-hidden card-hover"
-                whileHover={{ y: -10 }}
+                className="p-6 rounded-2xl glass card-hover"
               >
-                {/* Gradient Background on Hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${skill.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-                
                 {/* Icon */}
-                <motion.div
-                  className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${skill.gradient} flex items-center justify-center text-white mb-4`}
-                  whileHover={{ rotate: 360, scale: 1.1 }}
-                  transition={{ duration: 0.5 }}
-                >
+                <div className="w-16 h-16 rounded-2xl bg-gradient-custom flex items-center justify-center text-white mb-4">
                   {skill.icon}
-                </motion.div>
+                </div>
 
                 {/* Content */}
                 <h3 className="text-lg font-bold dark:text-white text-gray-900 mb-2">

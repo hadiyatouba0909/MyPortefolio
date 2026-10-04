@@ -1,3 +1,5 @@
+import colors from 'tailwindcss/colors';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -12,9 +14,9 @@ export default {
         'poppins': ['Poppins', 'sans-serif'],
       },
       colors: {
-        'custom-pink': '#EC4899',
-        'custom-purple': '#8B5CF6',
-        'custom-blue': '#06B6D4',
+        // Accent unique : les classes purple-* et pink-* du code utilisent la palette teal
+        purple: colors.teal,
+        pink: colors.teal,
         'dark': {
           DEFAULT: '#0f0f23',
           100: '#1a1a2e',
@@ -23,11 +25,8 @@ export default {
         },
       },
       backgroundImage: {
-        'gradient-custom': 'linear-gradient(135deg, #8B5CF6, #EC4899)',
-        'gradient-secondary': 'linear-gradient(135deg, #06B6D4, #8B5CF6)',
-        'gradient-accent': 'linear-gradient(135deg, #EC4899, #F59E0B)',
-        'gradient-dark': 'linear-gradient(135deg, #0f0f23, #1a1a2e)',
-        'gradient-radial': 'radial-gradient(ellipse at center, #8B5CF6 0%, transparent 70%)',
+        'gradient-custom': 'linear-gradient(135deg, #0d9488, #14b8a6)',
+        'gradient-secondary': 'linear-gradient(135deg, #0f766e, #0d9488)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
@@ -72,10 +71,7 @@ export default {
         },
       },
       boxShadow: {
-        'glow': '0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.2)',
-        'glow-pink': '0 0 20px rgba(236, 72, 153, 0.3), 0 0 40px rgba(236, 72, 153, 0.2)',
-        'glow-lg': '0 0 40px rgba(139, 92, 246, 0.4), 0 0 80px rgba(139, 92, 246, 0.2)',
-        'inner-glow': 'inset 0 0 20px rgba(139, 92, 246, 0.2)',
+        'glow': '0 4px 14px rgba(13, 148, 136, 0.25)',
       },
       backdropBlur: {
         'xs': '2px',
